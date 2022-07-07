@@ -1,0 +1,34 @@
+:root {
+    --bg-color: #22231E;
+}
+
+.main-background {
+    height: calc(98vh - 70px);
+    width: 99vw;
+    border-radius: 1vw;
+    background:
+        repeating-linear-gradient(45deg,
+            var(--bg-color),
+            var(--bg-color) 39px,
+            #404238 1px,
+            var(--bg-color) 40px)
+}
+
+.main-background .secondary {
+    background:
+        repeating-linear-gradient(135deg,
+            transparent,
+            transparent 39px,
+            #404238 1px,
+            transparent 40px)
+}
+.main-gearContainer {
+    top: 55vh;
+    height: 80vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.main-text {
+    color: white;
+}
