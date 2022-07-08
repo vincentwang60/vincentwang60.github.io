@@ -8,12 +8,12 @@ const css = require('../constants.css')
 const IndexPage = () => {
 
   return (
-    <>
+    <div>
       <Header />
-      <div style={{padding: '0.5vw', background: "#2B2C26"}}>
+      <div style={{padding: '10px', background: "#2B2C26"}}>
         <Main />
       </div>
-    </>
+    </div>
   )
 }
 
