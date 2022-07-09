@@ -23,28 +23,28 @@
             transparent 40px)
 }
 .main-gearContainer {
-    top: calc(100vh - 90px - 31vh);
-    left: calc(50vw - 10px - 31vh);
+    top: calc(100vh - 31vh);
+    left: calc(50vw - 31vh);
     height: 62vh;
     width: 62vh;
     display: flex;
-    position: relative;
+    position: absolute;
     justify-content: center;
 }
 .main-text {
     color: white;
 }
 .main-watch {
-    top: calc(100vh - 50vh);
-    left: calc(50vw - 50vh);
-    height: 100vh;
-    width: 100vh;
+    top: calc(100vh - 45vh);
+    left: calc(50vw - 45vh);
+    height: 90vh;
+    width: 90vh;
     position:absolute;
 }
 .main-watch-hand {
-    top: calc(100vh - 42vh);
+    top: calc(100vh - 38vh);
     left: calc(50vw - 50vh);
-    height: 55vh;
+    height: 50vh;
     width: 100vh;
     position:absolute;
 }

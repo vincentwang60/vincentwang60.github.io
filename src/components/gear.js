@@ -148,7 +148,7 @@ const GearSvg = forwardRef(function GearSvg(_, ref) {
 
 function Gear ({angle}) {
     useEffect(() => {
-        gsap.to(".gear", { duration: 2, rotation: angle*2, ease: "SteppedEase.config(2)"});
+        gsap.to(".gear", { duration: 2, rotation: angle*2, ease: "power4.out"});
     }, [angle])
     return (
         <div className="app">

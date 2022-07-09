@@ -1,27 +1,26 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "../styles/clockface.css";
 import gsap from "gsap";
 
-function Icon({ hover, clickEvent }) {
+function Icon({ hover, setCurrent }) {
   useEffect(() => {
-    switch(hover){
-      case 0: 
-        gsap.to(".clockface-i", { duration: 0.5, scale: .99, fill: "#D2D2C6"}); 
-        gsap.to(".clockface-ii", { duration: 0.5, scale: .99, fill: "#D2D2C6"}); 
-        gsap.to(".clockface-iii", { duration: 0.5, scale: .99, fill: "#D2D2C6"}); 
-        gsap.to(".clockface-iv", { duration: 0.5, scale: .99, fill: "#D2D2C6"}); 
-        gsap.to(".clockface-v", { duration: 0.5, scale: .99, fill: "#D2D2C6"}); 
+    switch (hover) {
+      case 0:
+        gsap.to(".clockface-i", { duration: 0.5, transformOrigin: 'center', scale: 1, fill: "#D2D2C6" });
+        gsap.to(".clockface-ii", { duration: 0.5, transformOrigin: 'center', scale: 1, fill: "#D2D2C6" });
+        gsap.to(".clockface-iii", { duration: 0.5, transformOrigin: 'center', scale: 1, fill: "#D2D2C6" });
+        gsap.to(".clockface-iv", { duration: 0.5, transformOrigin: 'center', scale: 1, fill: "#D2D2C6" });
+        gsap.to(".clockface-v", { duration: 0.5, transformOrigin: 'center', scale: 1, fill: "#D2D2C6" });
         break;
-      case 1: gsap.to(".clockface-i", { duration: 0.5, scale: 1.01, fill: "#FFC599"}); break;
-      case 2: gsap.to(".clockface-ii", { duration: 0.5, scale: 1.01, fill: "#FFC599"}); break;
-      case 3: gsap.to(".clockface-iii", { duration: 0.5, scale: 1.01, fill: "#FFC599"}); break;
-      case 4: gsap.to(".clockface-iv", { duration: 0.5, scale: 1.01, fill: "#FFC599"}); break;
-      case 5: gsap.to(".clockface-v", { duration: 0.5, scale: 1.01, fill: "#FFC599"}); break;
+      case 1: gsap.to(".clockface-i", { duration: 0.5, transformOrigin: 'center', scale: 1.04, fill: "#FFC599" }); break;
+      case 2: gsap.to(".clockface-ii", { duration: 0.5, transformOrigin: 'center', scale: 1.04, fill: "#FFC599" }); break;
+      case 3: gsap.to(".clockface-iii", { duration: 0.5, transformOrigin: 'center', scale: 1.04, fill: "#FFC599" }); break;
+      case 4: gsap.to(".clockface-iv", { duration: 0.5, transformOrigin: 'center', scale: 1.04, fill: "#FFC599" }); break;
+      case 5: gsap.to(".clockface-v", { duration: 0.5, transformOrigin: 'center', scale: 1.04, fill: "#FFC599" }); break;
     }
   }, [hover])
   return (
     <>
-      <div>{hover}</div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsBx="https://boxy-svg.com"
@@ -207,7 +206,7 @@ function Icon({ hover, clickEvent }) {
           letterSpacing="0.5"
           transform="rotate(-62.8 -158.177 261.58)"
           className="clockface-i"
-          onClick={()=>{clickEvent(1)}}
+          onClick={() => { setCurrent(1500) }}
         >
           bio
         </text>
@@ -222,7 +221,7 @@ function Icon({ hover, clickEvent }) {
           letterSpacing="0.5"
           transform="rotate(-32.2 -480.86 116.893)"
           className="clockface-ii"
-          onClick={()=>{clickEvent(2)}}
+          onClick={() => { setCurrent(2500) }}
         >
           experience
         </text>
@@ -236,7 +235,7 @@ function Icon({ hover, clickEvent }) {
           fontWeight="500"
           letterSpacing="0.5"
           className="clockface-iii"
-          onClick={()=>{clickEvent(3)}}
+          onClick={() => { setCurrent(3500) }}
         >
           portfolio
         </text>
@@ -251,7 +250,7 @@ function Icon({ hover, clickEvent }) {
           letterSpacing="0.5"
           transform="rotate(27.3 842.916 183.896)"
           className="clockface-iv"
-          onClick={()=>{clickEvent(4)}}
+          onClick={() => { setCurrent(4500) }}
         >
           hobbies
         </text>
@@ -266,7 +265,7 @@ function Icon({ hover, clickEvent }) {
           letterSpacing="0.5"
           transform="rotate(60.305 532.606 289.657)"
           className="clockface-v"
-          onClick={()=>{clickEvent(5)}}
+          onClick={() => { setCurrent(5500) }}
         >
           contact
         </text>

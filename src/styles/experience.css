@@ -1,0 +1,30 @@
+@import url("content.css");
+.content-text.heading {
+    padding: 1vh;
+    font-weight: bold;
+}
+.content-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 1vw;
+    height: 80%;
+}
+.content-image-pic2 {
+    width: 24vw;
+    height: 16vw;
+    border-radius: 5px;
+}
+.content-image-pic3 {
+    width: 24vw;
+    height: 16vw;
+    border-radius: 5px;
+}
+.content-text.subject {
+    font-size: 1.6vw;
+    font-weight: bold;
+}
+.content-text.body2 {
+    white-space: pre-line;
+    font-size: 1.3vw;
+}

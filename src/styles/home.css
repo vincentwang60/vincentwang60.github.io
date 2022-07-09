@@ -1,0 +1,39 @@
+@import url("content.css");
+.content-container.c0 {
+    padding-top: 12vh;
+    padding: 4vw;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.content-text.header1 {
+    text-align: end;
+}
+
+.content-text.header2 {
+    color: white;
+    font-weight: bold;
+    font-size: 5vw;
+    padding-bottom: 8vh;
+    text-shadow: 0px 8px 8px rgba(107, 112, 92, 0.8);
+    text-align: end;
+}
+
+.content-imageContainer {
+    position: absolute;
+    left: 42vw;
+    top: calc(5vh - 0.5vw);
+    height: 16vw;
+    width: 16vw;
+    background-color: #949A84;
+    border-radius: 50%;
+    box-shadow: 0px 6px 6px rgba(107, 112, 92, 0.5);
+}
+
+.content-image {
+    position: relative;
+    top: 0.5vw;
+    left: 0.5vw;
+    height: 15vw;
+    width: 15vw;
+}
