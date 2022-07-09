@@ -9,6 +9,7 @@ import gsap from "gsap";
 
 
 const Main = () => {
+  const isBrowser = typeof window !== "undefined"
   // -------------------- STATES -------------------- \\
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
   const [mouseCoords, setMouseCoords] = useState({ x: 0, y: 0 });
@@ -39,6 +40,9 @@ const Main = () => {
   }
 
   function getWindowDimensions() {
+    if (!isBrowser){
+      return {x:1000,y:1000};
+    }
     const { innerWidth: newWidth, innerHeight: newHeight } = window;
     return { x: newWidth, y: newHeight };
   }
