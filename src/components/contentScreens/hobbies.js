@@ -9,21 +9,37 @@ const Hobbies = ({ setCurrent }) => {
 
         <div className="content-container c1">
             <div className="content-titleContainer">
-            <div style={{fontSize: "8vh", lineHeight: "7vh"}} className="content-text title">{"H\nO\nB\nB\nI\nE\nS"}</div>
+                <div style={{ fontSize: "8vh", lineHeight: "7vh" }} className="content-text title">{"H\nO\nB\nB\nI\nE\nS"}</div>
                 <div className="content-text mini">updated {Constants.updated}</div>
             </div>
             <div className="content-textContainer">
-                <div className="content-text heading">Background</div>
+                <div className="content-text subject">
+                    {"Cooking\n"}
+                </div>
                 <div className="content-line"></div>
-                <div className="content-text body">
-                    {"Hi, my name is Vincent Wang!\n"}
+                <div className="content-text body2">
+                    {"uh"}
+                </div>
+                <div className="content-text subject">
+                    {"Reading\n"}
+                </div>
+                <div className="content-line"></div>
+                <div className="content-text body2">
+                    {"hm"}
+                </div>
+                <div className="content-text subject">
+                    {"Bouldering\n"}
+                </div>
+                <div className="content-line"></div>
+                <div className="content-text body2">
+                    {"hm"}
                 </div>
             </div>
             <div className="content-image-pic1-container">
                 <img className="content-image-pic1" src={pic1} alt="garden"></img>
             </div>
-            <IoClose onClick={()=>{setCurrent(0);}} size={'2vw'} className="content-close" />
-        </div>
+            <IoClose onClick={() => { setCurrent(0); }} size={'2vw'} className="content-close" />
+        </div >
     )
 }
 

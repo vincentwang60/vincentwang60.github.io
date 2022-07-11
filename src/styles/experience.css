@@ -24,7 +24,6 @@
     font-size: 1.6vw;
     font-weight: bold;
 }
-.content-text.body2 {
-    white-space: pre-line;
-    font-size: 1.3vw;
+.content-close {
+    margin-right: 0.5vw;
 }

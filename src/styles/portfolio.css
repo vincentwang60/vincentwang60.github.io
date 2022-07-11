@@ -1,0 +1,49 @@
+@import url("content.css");
+.content-main {
+    display: flex;
+    width: 80vw;
+}
+.content-textContainer.portfolio {
+    width: 60vw;
+}
+.content-line {
+    width: 100%;
+}
+.content-text.caption {
+    white-space: pre-line;
+    font-size: 0.8vw;
+    text-align: center;
+}
+.content-video-container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+.content-video-container.v1 {
+    width: 50%;
+    height: 60%;
+}
+.content-video-container.v2 {
+    width: 50%;
+    height: 60%;
+}
+.content-video-container.v3 {
+    width: 100%;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.content-gallery {
+    width: 40vw;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80%;
+    padding: 0.5vh;
+}
+.content-video2 {
+    margin: 0;
+    padding: 0;
+}

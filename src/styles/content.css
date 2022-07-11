@@ -26,3 +26,10 @@
     white-space: pre-line;
     font-size: 1.5vw;
 }
+.content-text.body2 {
+    white-space: pre-line;
+    font-size: 1.3vw;
+}
+.content-container.c1 {
+    padding: 0.5vw;
+}
