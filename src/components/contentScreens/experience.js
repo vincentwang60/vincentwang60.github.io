@@ -18,7 +18,7 @@ const Experience = ({ setCurrent }) => {
                     {"Work\n"}
                 </div>
                 <div className="content-line"></div>
-                <div className="content-text body2">
+                <div className="content-text body3">
                     {"I'm currently in Boston working as a Full-Stack Web Developer Intern at MassMutual, where I work closely with my team to develop a secure and seamless authentication portal. The work I do includes managing our databases, developing new front-end pages, and facing incoming security threats.\n\n"}
                     {"At MIT I've conducted research at the MIT Media Lab and Space Systems Laboratory.\n"}
                     {"As a research assistant, I collected and analyzed data, created models, developed prototypes, and designed education games.\n\n"}
@@ -28,7 +28,7 @@ const Experience = ({ setCurrent }) => {
                     {"Activities\n"}
                 </div>
                 <div className="content-line"></div>
-                <div className="content-text body2">
+                <div className="content-text body3">
                     {"I am president of the MIT Chinese Students Club. In my role I promote Asian American advocacy, celebrate Chinese culture, and organize events for both MIT and the greater Boston area.\n"}
                     {"I'm also on the MIT Varsity Squash team, having played for over 12 years.\n\n"}
                     {"I've learned how to deal with pressure and how to be bold and take initiative."}

@@ -1,12 +1,12 @@
 import React from "react";
 import pic1 from "../../images/pic1.jpg"
-import '../../styles/content.css'
 import { IoClose } from "react-icons/io5";
 import Constants from '../../constants'
+import '../../styles/hobbies.css'
+import {food1, food2, food3, food4, food5, food6, food7, food8, food9, food10, food11, food12, food13, food14} from '../../images/hobbies/index'
 
 const Hobbies = ({ setCurrent }) => {
     return (
-
         <div className="content-container c1">
             <div className="content-titleContainer">
                 <div style={{ fontSize: "8vh", lineHeight: "7vh" }} className="content-text title">{"H\nO\nB\nB\nI\nE\nS"}</div>
@@ -36,7 +36,6 @@ const Hobbies = ({ setCurrent }) => {
                 </div>
             </div>
             <div className="content-image-pic1-container">
-                <img className="content-image-pic1" src={pic1} alt="garden"></img>
             </div>
             <IoClose onClick={() => { setCurrent(0); }} size={'2vw'} className="content-close" />
         </div >

@@ -27,3 +27,7 @@
 .content-close {
     margin-right: 0.5vw;
 }
+.content-text.body3 {
+    white-space: pre-line;
+    font-size: 1.1vw;
+}
