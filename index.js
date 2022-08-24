@@ -10,7 +10,7 @@ const IndexPage = () => {
   return (
     <div>
       <Header />
-      <div style={{padding: '10px', background: "#2B2C26"}}>
+      <div style={{padding: '0px', background: "#20211C"}}>
         <Main />
       </div>
     </div>
