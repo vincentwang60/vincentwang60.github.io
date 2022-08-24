@@ -77,15 +77,16 @@ const Main = () => {
 
   useEffect(() => {
     if (current >= 1000) {
-      console.log("SHRINKING")
-      gsap.to(".main-gearContainer", { duration: 1.5, scale: 0.5, transform: "translateY(5vh)", transformOrigin: 'center', ease: "power3.out" });
-      gsap.to(".main-watch", { duration: 1.5, scale: 0.5, transform: "translateY(5vh)", transformOrigin: 'center', ease: "power3.out" });
-      gsap.to(".main-watch-hand", { duration: 1.5, scale: 0.5, rotation: angle, transform: "translateY(5vh)", transformOrigin: '50% 76%', ease: "power3.out" });
+      // shrinking gear
+      gsap.to(".main-gearContainer", { duration: 1, scale: 0.5, transform: "translateY(5vh)", transformOrigin: 'center', ease: "expo.out" });
+      gsap.to(".main-watch", { duration: 1, scale: 0.5, transform: "translateY(5vh)", transformOrigin: 'center', ease: "expo.out" });
+      gsap.to(".main-watch-hand", { duration: 1, scale: 0.5, rotation: angle, transform: "translateY(5vh)", transformOrigin: '50% 76%', ease: "expo.out" });
     }
     else {
-      gsap.to(".main-gearContainer", { duration: 1.5, scale: 1, y: 0, ease: "power3.out" });
-      gsap.to(".main-watch", { duration: 1.5, scale: 1, y: 0, ease: "power3.out" });
-      gsap.to(".main-watch-hand", { duration: 1.5, scale: 1, y: 0, rotation: angle, transformOrigin: '50% 76%', ease: "power3.out" });
+      // expanding gear
+      gsap.to(".main-gearContainer", { duration: 1, scale: 1, y: 0, ease: "expo.out" });
+      gsap.to(".main-watch", { duration: 1, scale: 1, y: 0, ease: "expo.out" });
+      gsap.to(".main-watch-hand", { duration: 1, scale: 1, y: 0, rotation: angle, transformOrigin: '50% 76%', ease: "expo.out" });
     }
     setAngle((current-3500)*180/6000)
   }, [current, windowDimensions])

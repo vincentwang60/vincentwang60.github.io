@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap');
+.content-textContainer.contact {
+    width: 80vw;
+}
+.content-text.link {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+.content-socialContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-text.socials {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+.content-social {
+    color: #D2D2C6;
+    margin-right: 0.5vw;
+    transform: translateY(0.5vh);
+}

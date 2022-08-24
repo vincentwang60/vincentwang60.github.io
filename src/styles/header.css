@@ -4,12 +4,11 @@
     display: flex;
     background-color: #2B2C26;
     padding: 10px;
-    height: 70px;
+    height: 80px;
     width: 100vw;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 2vh;
 }
 
 .header-text {
@@ -23,4 +22,13 @@
 
 .header-img {
     filter: drop-shadow(0px 4px 4px rgba(255, 232, 214, 0.5));
+}
+.header-line {
+    margin-top: 1vh;
+    width: 100vw;
+    height: 0px;
+    margin-bottom: 1vh;
+    position: absolute;
+    top: 70px;
+    border: 1px solid #20211C;
 }

@@ -1,3 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap');
-.content-image-pic1-container {
+.content-image-food {
+    border-radius: 5px;
+    margin: 0.5vw;
+}
+.content-image-pic-container1 {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.content-image-pic-container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+.content-gallery-container {
+    width: 30vw;
+    height: 100%;
+}
+.content-image-food.v1 {
+    width: 50%;
+}
+.content-image-food.v2 {
+    width: 10vw;
+}
+.content-image-food.v3 {
+    width: 10vw;
+}
+.content-image-reading {
+    height: 100%;
+    border-radius: 5px;
+    margin: 0.5vw;
+}
+.content-video {
+    width: 50%;
+    border-radius: 5px;
+    margin: 0.5vw;
 }

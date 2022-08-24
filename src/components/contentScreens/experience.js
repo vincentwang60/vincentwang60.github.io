@@ -37,7 +37,7 @@ const Experience = ({ setCurrent }) => {
             </div>
             <div className="content-image-container">
                 <img className="content-image-pic2" src={pic2} alt="mitcsc"></img>
-                <img className="content-image-pic3" src={pic4} alt="solo"></img>
+                <img className="content-image-pic2" src={pic4} alt="solo"></img>
             </div>
             <IoClose onClick={()=>{setCurrent(0);}} size={'2vw'} className="content-close" />
         </div>

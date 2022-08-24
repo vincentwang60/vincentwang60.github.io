@@ -1,7 +1,6 @@
 import React from "react";
-import pic1 from "../../images/pic1.jpg"
-import '../../styles/content.css'
-import { IoClose } from "react-icons/io5";
+import '../../styles/contact.css'
+import { IoLogoGithub, IoClose, IoLogoLinkedin, IoMail } from "react-icons/io5";
 import Constants from '../../constants'
 
 const Contact = ({ setCurrent }) => {
@@ -12,15 +11,17 @@ const Contact = ({ setCurrent }) => {
             <div style={{fontSize: "7vh", lineHeight: "7vh"}} className="content-text title">{"C\nO\nN\nT\nA\nC\nT"}</div>
                 <div className="content-text mini">updated {Constants.updated}</div>
             </div>
-            <div className="content-textContainer">
-                <div className="content-text heading">Background</div>
+            <div className="content-textContainer contact">
+                <div className="content-text heading">Contact Information</div>
                 <div className="content-line"></div>
                 <div className="content-text body">
-                    {"Hi, my name is Vincent Wang!\n"}
+                    {"I'm currently looking for interesting and challenging software interships and other opportunities!\n"}
+                    {"You can reach me via email at"}<a className="content-text link"><IoMail className="content-social" size={'1.5vw'}/>vkwang@mit.edu</a>
+                    {"\nCheck out some more of my work at my github:"}
+                    <a target="_blank" href="https://www.github.com/vincentwang60" className="content-text socials"><IoLogoGithub className="content-social" size={'1.5vw'}/>github.com/vincentwang60</a>
+                    {"\nSee what I'm up to or reach out via LinkedIn:"}
+                    <a target="_blank" href="https://www.linkedin.com/in/vkwang" className="content-text socials"><IoLogoLinkedin className="content-social" size={'1.5vw'}/>linkedin.com/in/vkwang</a>
                 </div>
-            </div>
-            <div className="content-image-pic1-container">
-                <img className="content-image-pic1" src={pic1} alt="garden"></img>
             </div>
             <IoClose onClick={() => { setCurrent(0); }} size={'2vw'} className="content-close" />
         </div>

@@ -34,7 +34,7 @@ const Bio = ({ setCurrent }) => {
                     <div className="content-text skills">VCS <IoLogoGithub className="content-icon" size={'2vw'}/></div>
                 </div>
                 <div className="content-text body">
-                    {"I'm expecting to graduate in June 2022.\n\n"}
+                    {"I'm expecting to graduate in December 2023.\n\n"}
                     {"I’m passionate about web and app development, education, algorithms, and mathematics."}
                 </div>
             </div>
