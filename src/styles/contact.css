@@ -5,6 +5,7 @@
 .content-text.link {
     font-size: 1.5vw;
     font-weight: bold;
+    cursor: pointer;
 }
 .content-socialContainer {
     display: flex;

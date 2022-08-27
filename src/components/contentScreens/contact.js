@@ -1,9 +1,17 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import '../../styles/contact.css'
-import { IoLogoGithub, IoClose, IoLogoLinkedin, IoMail } from "react-icons/io5";
+import { IoLogoGithub, IoClose, IoLogoLinkedin, IoMail, IoCopy } from "react-icons/io5";
 import Constants from '../../constants'
 
 const Contact = ({ setCurrent }) => {
+    const [fade, setFade] = useState(0)
+    useEffect(()=>{
+        if (fade > 0){
+            setTimeout(()=>{
+                setFade(fade-0.04)
+            },100)
+        }
+    },[fade])
     return (
 
         <div className="content-container c1">
@@ -16,7 +24,8 @@ const Contact = ({ setCurrent }) => {
                 <div className="content-line"></div>
                 <div className="content-text body">
                     {"I'm currently looking for interesting and challenging software interships and other opportunities!\n"}
-                    {"You can reach me via email at"}<a className="content-text link"><IoMail className="content-social" size={'1.5vw'}/>vkwang@mit.edu</a>
+                    {"You can reach me via email at"}<a onClick={() => {navigator.clipboard.writeText('vkwang@mit.edu'); setFade(1)}} className="content-text link"><IoMail className="content-social" size={'1.5vw'}/>vkwang@mit.edu</a>
+                    <a style={{opacity: fade}}><IoCopy className="content-social" size={'1.5vw'}/>copied to clipboard</a>
                     {"\nCheck out some more of my work at my github:"}
                     <a target="_blank" href="https://www.github.com/vincentwang60" className="content-text socials"><IoLogoGithub className="content-social" size={'1.5vw'}/>github.com/vincentwang60</a>
                     {"\nSee what I'm up to or reach out via LinkedIn:"}

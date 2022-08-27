@@ -8,30 +8,29 @@ import gsap from "gsap";
 
 
 
-const Main = () => {
+const Main = (props) => {
   const isBrowser = typeof window !== "undefined"
   // -------------------- STATES -------------------- \\
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
   const [mouseCoords, setMouseCoords] = useState({ x: 0, y: 0 });
   const [angle, setAngle] = useState(0)
   const [hover, setHover] = useState(0)
-  const [current, setCurrent] = useState(500)
 
   // -------------------- FUNCTIONS -------------------- \\
   function handleScroll(scrollAmount) {
     if (scrollAmount > 0) {
-      if (current < 6000) { setCurrent(current + scrollAmount) }
-      else { setCurrent(6000) }
+      if (props.current < 6000) { props.setCurrent(props.current + scrollAmount) }
+      else { props.setCurrent(6000) }
     }
     else {
-      if (current > 0) { setCurrent(current + scrollAmount) }
-      else { setCurrent(0) }
+      if (props.current > 0) { props.setCurrent(props.current + scrollAmount) }
+      else { props.setCurrent(0) }
     }
   }
 
   function getAngle(mouse, window) {
     let newY = window.y
-    if (current >= 1000) {
+    if (props.current >= 1000) {
       newY = window.y + 5 / 100 * (document.documentElement.clientHeight)
     }
     let obj = { x: mouse.x - window.x / 2, y: newY - mouse.y }
@@ -76,7 +75,7 @@ const Main = () => {
   }, [angle])
 
   useEffect(() => {
-    if (current >= 1000) {
+    if (props.current >= 1000) {
       // shrinking gear
       gsap.to(".main-gearContainer", { duration: 1, scale: 0.5, transform: "translateY(5vh)", transformOrigin: 'center', ease: "expo.out" });
       gsap.to(".main-watch", { duration: 1, scale: 0.5, transform: "translateY(5vh)", transformOrigin: 'center', ease: "expo.out" });
@@ -88,21 +87,21 @@ const Main = () => {
       gsap.to(".main-watch", { duration: 1, scale: 1, y: 0, ease: "expo.out" });
       gsap.to(".main-watch-hand", { duration: 1, scale: 1, y: 0, rotation: angle, transformOrigin: '50% 76%', ease: "expo.out" });
     }
-    setAngle((current-3500)*180/6000)
-  }, [current, windowDimensions])
+    setAngle((props.current-3500)*180/6000)
+  }, [props.current, windowDimensions])
 
   // -------------------- RENDER -------------------- \\
   return (
     <div className="main-background">
       <div onWheel={(e) => { handleScroll(-e.nativeEvent.wheelDelta) }} className="main-background secondary">
-        <Content current={current} setCurrent={setCurrent} windowDimensions={windowDimensions} />
+        <Content current={props.current} setCurrent={props.setCurrent} windowDimensions={windowDimensions} />
         <div className="main-watchContainer">
           <div className="main-gearContainer">
             <Gear angle={angle} />
           </div>
           <img className="main-watch-hand" src={Hand} alt="Watch face" />
           <div className="main-watch">
-            <Watch hover={hover} setCurrent={setCurrent} />
+            <Watch hover={hover} setCurrent={props.setCurrent} />
           </div>
         </div>
       </div>

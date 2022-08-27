@@ -2,26 +2,29 @@
 
 .header-background {
     display: flex;
-    background-color: #2B2C26;
+    background-color: #EBEDE9;
     padding: 10px;
     height: 80px;
     width: 100vw;
-    flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
 }
 
 .header-text {
     font-family: 'EB Garamond';
     font-style: normal;
-    font-size: 26px;
-    color: #D2D2C6;
-    letter-spacing: 3px;
-
+    font-size: 18px;
+    color: #34372F;
+    letter-spacing: 1px;
+    padding: 0.8vw;
+    cursor: pointer;
 }
 
 .header-img {
     filter: drop-shadow(0px 4px 4px rgba(255, 232, 214, 0.5));
+    width: 8vw;
+    height: 2.025vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 .header-line {
     margin-top: 1vh;
