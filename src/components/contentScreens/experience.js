@@ -19,9 +19,8 @@ const Experience = ({ setCurrent }) => {
                 </div>
                 <div className="content-line"></div>
                 <div className="content-text body3">
-                    {"This summer I was in Boston working as a Full-Stack Web Developer Intern at MassMutual, where I worked closely with my team to develop a secure and seamless authentication portal. The work I do includes managing our databases, developing new front-end pages, and facing incoming security threats.\n"}
-                    {"At MIT I've conducted research at the MIT Media Lab and Space Systems Laboratory.\n"}
-                    {"As a research assistant, I collected and analyzed data, created models, developed prototypes, and designed education games.\n"}
+                    {"As a Full-Stack Web Developer Intern at MassMutual, this summer I helped develop a secure and seamless authentication portal. I managed our databases, developed new front-end pages, and faced incoming security threats.\n\n"}
+                    {"As a research assistant at MIT I've conducted research at the MIT Media Lab and Space Systems Laboratory. I collected and analyzed data, created models, developed prototypes, and designed education games.\n\n"}
                     {"I've learned to work effectively both independently and with a team while communicating effectively."}
                 </div>
                 <div className="content-text subject">
@@ -29,8 +28,8 @@ const Experience = ({ setCurrent }) => {
                 </div>
                 <div className="content-line"></div>
                 <div className="content-text body3">
-                    {"I am president of the MIT Chinese Students Club. In my role I promote Asian American advocacy, celebrate Chinese culture, and organize events for both MIT and the greater Boston area.\n"}
-                    {"I'm also on the MIT Varsity Squash team, having played for over 12 years.\n"}
+                    {"As president of the MIT Chinese Students Club, I promote Asian American advocacy, celebrate Chinese culture, and organize events for both MIT and the greater Boston area.\n\n"}
+                    {"I'm also on the MIT Varsity Squash team, having played for over 12 years.\n\n"}
                     {"I've learned how to deal with pressure and how to be bold and take initiative."}
 
                 </div>

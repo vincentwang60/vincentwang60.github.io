@@ -21,9 +21,7 @@ const Portfolio = ({ setCurrent }) => {
                     </div>
                     <div className="content-line"></div>
                     <div className="content-text body2">
-                        {"I worked with a couple friends to develop an app for creating and sharing business cards.\n"}
-                        {"As the only developer, I built the app using React Native, AWS Cognito, and DynamoDB.\n"}
-                        {"From this project I gained a great deal of experience in full-stack app development. I learned how to use Figma designs and perform CRUD operations with my database."}
+                        {"I worked with a couple friends to develop an app for creating and sharing business cards. As the only developer, I built the app using React Native, AWS Cognito, and DynamoDB. From this project I gained a great deal of experience in full-stack app development. I learned how to use Figma designs and perform CRUD operations with my database.\n"}
                     </div>
                     <div className="content-text subject">
                         {"PolyPhony\n"}
@@ -49,7 +47,7 @@ const Portfolio = ({ setCurrent }) => {
                         <div className="content-text caption">
                             {"Click App demo, developed in 2021"}
                             <div>
-                                <a target="_blank" className="content-text caption" href="https://github.com/vincentwang60/Click">Link to Project</a>
+                                <a target="_blank" className="content-text caption" href="https://github.com/vincentwang60/Click">Github</a>
                             </div>
                         </div>
                     </div>
@@ -60,7 +58,7 @@ const Portfolio = ({ setCurrent }) => {
                         <div className="content-text caption">
                             {"Sliding puzzle solver, developed in 2020"}
                             <div>
-                                <a target="_blank" className="content-text caption" href="https://github.com/vincentwang60/A-star-sliding-puzzle-solver">Link to Project</a>
+                                <a target="_blank" className="content-text caption" href="https://github.com/vincentwang60/A-star-sliding-puzzle-solver">Github</a>
                             </div>
                         </div>
                     </div>
@@ -70,7 +68,8 @@ const Portfolio = ({ setCurrent }) => {
                         </video>
                         <div className="content-text caption">{"PolyPhony demo, developed in 2022 in under 2 weeks"}
                             <div>
-                                <a target="_blank" className="content-text caption" href="https://github.com/vincentwang60/Click">Link to Project</a>
+                            <a target="_blank" className="content-text caption" href="https://github.com/vincentwang60/polyphony">Github</a>
+                            <a target="_blank" className="content-text caption" href="https://poly-phony.herokuapp.com/">Link to Website</a>
                             </div>
                         </div>
                     </div>

@@ -12,11 +12,11 @@ function Icon({ hover, setCurrent }) {
         gsap.to(".clockface-iv", { duration: 0.5, transformOrigin: 'center', scale: 1, fill: "#D2D2C6" });
         gsap.to(".clockface-v", { duration: 0.5, transformOrigin: 'center', scale: 1, fill: "#D2D2C6" });
         break;
-      case 1: gsap.to(".clockface-i", { duration: 0.5, transformOrigin: 'center', scale: 1.04, fill: "#FFC599" }); break;
-      case 2: gsap.to(".clockface-ii", { duration: 0.5, transformOrigin: 'center', scale: 1.04, fill: "#FFC599" }); break;
-      case 3: gsap.to(".clockface-iii", { duration: 0.5, transformOrigin: 'center', scale: 1.04, fill: "#FFC599" }); break;
-      case 4: gsap.to(".clockface-iv", { duration: 0.5, transformOrigin: 'center', scale: 1.04, fill: "#FFC599" }); break;
-      case 5: gsap.to(".clockface-v", { duration: 0.5, transformOrigin: 'center', scale: 1.04, fill: "#FFC599" }); break;
+      case 1: gsap.to(".clockface-i", { duration: 0.5, transformOrigin: 'center', scale: 1.06, fill: "#FFC599" }); break;
+      case 2: gsap.to(".clockface-ii", { duration: 0.5, transformOrigin: 'center', scale: 1.06, fill: "#FFC599" }); break;
+      case 3: gsap.to(".clockface-iii", { duration: 0.5, transformOrigin: 'center', scale: 1.06, fill: "#FFC599" }); break;
+      case 4: gsap.to(".clockface-iv", { duration: 0.5, transformOrigin: 'center', scale: 1.06, fill: "#FFC599" }); break;
+      case 5: gsap.to(".clockface-v", { duration: 0.5, transformOrigin: 'center', scale: 1.06, fill: "#FFC599" }); break;
     }
   }, [hover])
   return (
@@ -33,59 +33,6 @@ function Icon({ hover, setCurrent }) {
             url(https://fonts.googleapis.com/css2?family=EB+Garamond%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800&amp;display=swap);
           </style>
         </defs>
-        <g
-          fill="#D2D2C6"
-          stroke="#D2D2C6"
-          fontFamily="EB Garamond"
-          fontWeight="500"
-        >
-          <text
-            style={{ lineHeight: 48.5007, whiteSpace: "pre" }}
-            fontSize="31.26"
-            paintOrder="stroke"
-            transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.45761 -.88915 1.10567 .56905 -422.295 324.534)"
-          >
-            <tspan x="143.246" y="388.641">
-              I
-            </tspan>
-          </text>
-          <text
-            style={{ whiteSpace: "pre" }}
-            fontSize="29.672"
-            transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.6135 -.3865 .65696 1.04282 -201.35 -6.917)"
-          >
-            <tspan x="143.246" y="388.641">
-              II
-            </tspan>
-          </text>
-          <text
-            style={{ lineHeight: 39.5388, whiteSpace: "pre" }}
-            fontSize="25.484"
-            transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.79053 0 0 1.29493 124.157 -193.153)"
-          >
-            <tspan x="143.246" y="388.641">
-              III
-            </tspan>
-          </text>
-          <text
-            style={{ lineHeight: 41.4903, whiteSpace: "pre" }}
-            fontSize="25.931"
-            transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.70628 .36467 -.62951 1.21922 484.013 -194.318)"
-          >
-            <tspan x="143.246" y="388.641">
-              IV
-            </tspan>
-          </text>
-          <text
-            style={{ whiteSpace: "pre" }}
-            fontSize="32.736"
-            transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.44074 .77387 -1.13423 .64598 793.117 39.39)"
-          >
-            <tspan x="143.246" y="388.641">
-              V
-            </tspan>
-          </text>
-        </g>
         <g
           fill="#D8D8D8"
           stroke="#D2D2C6"
@@ -195,6 +142,65 @@ function Icon({ hover, setCurrent }) {
           rx="187.211"
           ry="187.211"
         ></ellipse>
+        
+        <g
+          fill="#D2D2C6"
+          stroke="#D2D2C6"
+          fontFamily="EB Garamond"
+          fontWeight="500"
+        >
+          <text
+            style={{ lineHeight: 48.5007, whiteSpace: "pre" }}
+            fontSize="31.26"
+            paintOrder="stroke"
+            transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.45761 -.88915 1.10567 .56905 -422.295 324.534)"
+            className="clockface-i"
+          >
+            <tspan x="143.246" y="388.641" onClick={()=>{setCurrent(500)}}>
+              I
+            </tspan>
+          </text>
+          <text
+            style={{ whiteSpace: "pre" }}
+            fontSize="29.672"
+            transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.6135 -.3865 .65696 1.04282 -201.35 -6.917)"
+            className="clockface-ii"
+          >
+            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(1500)}}>
+              II
+            </tspan>
+          </text>
+          <text
+            style={{ lineHeight: 39.5388, whiteSpace: "pre" }}
+            fontSize="25.484"
+            transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.79053 0 0 1.29493 124.157 -193.153)"
+            className="clockface-iii"
+          >
+            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(2500)}}>
+              III
+            </tspan>
+          </text>
+          <text
+            style={{ lineHeight: 41.4903, whiteSpace: "pre" }}
+            fontSize="25.931"
+            transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.70628 .36467 -.62951 1.21922 484.013 -194.318)"
+            className="clockface-iv"
+          >
+            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(3500)}}>
+              IV
+            </tspan>
+          </text>
+          <text
+            style={{ whiteSpace: "pre" }}
+            fontSize="32.736"
+            transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.44074 .77387 -1.13423 .64598 793.117 39.39)"
+            className="clockface-v"
+          >
+            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(4500)}}>
+              V
+            </tspan>
+          </text>
+        </g>
         <text
           style={{ whiteSpace: "pre" }}
           x="34.59"
