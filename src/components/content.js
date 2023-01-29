@@ -11,7 +11,6 @@ import Contact from "./contentScreens/contact"
 
 const Content = ({ current, setCurrent, windowDimensions }) => {
   useEffect(() => {
-    console.log("MOVE ALONG", current)
     let width = document.documentElement.clientWidth
     if (current < 1000) {
       gsap.to(".content-wholeContainer", { ease: "power4.out", duration: 2, x: 0 });

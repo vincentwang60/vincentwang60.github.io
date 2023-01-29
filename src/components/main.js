@@ -15,6 +15,7 @@ const Main = (props) => {
   const [mouseCoords, setMouseCoords] = useState({ x: 0, y: 0 });
   const [angle, setAngle] = useState(0)
   const [hover, setHover] = useState(0)
+  const [loading, setLoading] = useState(true)
 
   // -------------------- FUNCTIONS -------------------- \\
   function handleScroll(scrollAmount) {
@@ -46,6 +47,9 @@ const Main = (props) => {
     return { x: newWidth, y: newHeight };
   }
 
+  function demoAsyncCall() {
+    return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+  }
   // -------------------- EFFECTS -------------------- \\
   useEffect(() => {
     const handleWindowMouseMove = event => {
@@ -54,6 +58,7 @@ const Main = (props) => {
     const handleResize = () => { setWindowDimensions(getWindowDimensions()); }
     window.addEventListener('mousemove', handleWindowMouseMove);
     window.addEventListener('resize', handleResize);
+    demoAsyncCall().then(setLoading(false))
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleWindowMouseMove);
@@ -91,6 +96,24 @@ const Main = (props) => {
   }, [props.current, windowDimensions])
 
   // -------------------- RENDER -------------------- \\
+  if(!loading){
+    return (
+      <div className="main-background">
+        <div className="main-background secondary">
+          <Content current={props.current} setCurrent={props.setCurrent} windowDimensions={windowDimensions} />
+          <div className="main-watchContainer">
+            <div className="main-gearContainer">
+              <Gear angle={angle} />
+            </div>
+            <img className="main-watch-hand" src={Hand} alt="Watch face" />
+            <div className="main-watch">
+              <Watch hover={hover} setCurrent={props.setCurrent} />
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
   return (
     <div className="main-background">
       <div onWheel={(e) => { handleScroll(-e.nativeEvent.wheelDelta) }} className="main-background secondary">

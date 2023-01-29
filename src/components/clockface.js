@@ -156,7 +156,7 @@ function Icon({ hover, setCurrent }) {
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.45761 -.88915 1.10567 .56905 -422.295 324.534)"
             className="clockface-i"
           >
-            <tspan x="143.246" y="388.641" onClick={()=>{setCurrent(500)}}>
+            <tspan x="143.246" y="388.641" onClick={()=>{setCurrent(1500)}}>
               I
             </tspan>
           </text>
@@ -166,7 +166,7 @@ function Icon({ hover, setCurrent }) {
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.6135 -.3865 .65696 1.04282 -201.35 -6.917)"
             className="clockface-ii"
           >
-            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(1500)}}>
+            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(2500)}}>
               II
             </tspan>
           </text>
@@ -176,7 +176,7 @@ function Icon({ hover, setCurrent }) {
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.79053 0 0 1.29493 124.157 -193.153)"
             className="clockface-iii"
           >
-            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(2500)}}>
+            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(3500)}}>
               III
             </tspan>
           </text>
@@ -186,7 +186,7 @@ function Icon({ hover, setCurrent }) {
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.70628 .36467 -.62951 1.21922 484.013 -194.318)"
             className="clockface-iv"
           >
-            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(3500)}}>
+            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(4500)}}>
               IV
             </tspan>
           </text>
@@ -196,7 +196,7 @@ function Icon({ hover, setCurrent }) {
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.44074 .77387 -1.13423 .64598 793.117 39.39)"
             className="clockface-v"
           >
-            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(4500)}}>
+            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(5500)}}>
               V
             </tspan>
           </text>
