@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header from "../components/header"
 import Main from "../components/main"
 import {Helmet} from "react-helmet";
 const css = require('../constants.css')
@@ -14,7 +13,6 @@ const IndexPage = () => {
       <Helmet>
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
       </Helmet>
-      <Header setCurrent = {setCurrent} />
       <div style={{padding: '0px', background: "#20211C"}}>
         <Main current = {current} setCurrent = {setCurrent}/>
       </div>
