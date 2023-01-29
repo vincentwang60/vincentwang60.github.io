@@ -9,7 +9,7 @@ import Portfolio from "./contentScreens/portfolio"
 import Hobbies from "./contentScreens/hobbies"
 import Contact from "./contentScreens/contact"
 
-const Content = ({ current, setCurrent, windowDimensions }) => {
+const Content = ({ mobile, current, setCurrent, windowDimensions }) => {
   useEffect(() => {
     let width = document.documentElement.clientWidth
     if (current < 1000) {
@@ -33,7 +33,7 @@ const Content = ({ current, setCurrent, windowDimensions }) => {
   }, [current, windowDimensions])
   return (
     <div className="content-wholeContainer">
-      <Home />
+      <Home mobile={mobile}/>
       <Bio setCurrent={setCurrent} />
       <Experience setCurrent={setCurrent} />
       <Portfolio setCurrent={setCurrent} />

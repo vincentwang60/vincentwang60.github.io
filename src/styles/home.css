@@ -11,29 +11,29 @@
 }
 
 .content-text.header2 {
-    color: white;
     font-weight: bold;
     font-size: 5vw;
     padding-bottom: 8vh;
-    text-shadow: 0px 8px 8px rgba(107, 112, 92, 0.8);
+    text-shadow: 0px 8px 8px #1C1C1C;
     text-align: end;
 }
 
 .content-imageContainer {
     position: absolute;
-    left: 42vw;
+    left: calc(50vw - 12.5vh);
     top: calc(5vh - 0.5vw);
-    height: 16vw;
-    width: 16vw;
-    background-color: #949A84;
+    height: 25vh;
+    width: 25vh;
+    background-color: var(--light-gold);
     border-radius: 50%;
-    box-shadow: 0px 6px 6px rgba(107, 112, 92, 0.5);
+    outline: 2px solid var(--light-gold);
+    outline-offset: 10px;
 }
 
 .content-image {
     position: relative;
-    top: 0.5vw;
-    left: 0.5vw;
-    height: 15vw;
-    width: 15vw;
+    top: 4px;
+    left: 4px;
+    height: calc(25vh - 8px);
+    width: calc(25vh - 8px);
 }

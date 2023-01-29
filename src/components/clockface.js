@@ -1,8 +1,16 @@
 import React, { useEffect } from "react";
-import "../styles/clockface.css";
 import gsap from "gsap";
+import '../styles/clockface.css'
 
-function Icon({ hover, setCurrent }) {
+function Icon({ hover, setCurrent, angle }) {
+  const angleToCurrent = (angle) => {
+    if (angle < -47) { return 1500 }
+    else if (angle > -47 && angle < -18) { return 2500 }
+    else if (angle > -18 && angle < 18) { return 3500 }
+    else if (angle > 18 && angle < 42) { return 4500 }
+    else if (angle > 42 && angle < 70) { return 5500 }
+    return 5500
+  }
   useEffect(() => {
     switch (hover) {
       case 0:
@@ -20,7 +28,7 @@ function Icon({ hover, setCurrent }) {
     }
   }, [hover])
   return (
-    <>
+    <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsBx="https://boxy-svg.com"
@@ -132,6 +140,8 @@ function Icon({ hover, setCurrent }) {
           paintOrder="stroke markers"
           rx="247"
           ry="247"
+          cursor='pointer'
+          onClick={()=>{setCurrent(angleToCurrent(angle))}}
         ></ellipse>
         <ellipse
           cx="250.596"
@@ -141,6 +151,8 @@ function Icon({ hover, setCurrent }) {
           strokeWidth="3"
           rx="187.211"
           ry="187.211"
+          cursor='pointer'
+          onClick={()=>{setCurrent(angleToCurrent(angle))}}
         ></ellipse>
         
         <g
@@ -154,9 +166,10 @@ function Icon({ hover, setCurrent }) {
             fontSize="31.26"
             paintOrder="stroke"
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.45761 -.88915 1.10567 .56905 -422.295 324.534)"
-            className="clockface-i"
+            className="clockface"
+            onClick={()=>{setCurrent(angleToCurrent(angle))}}
           >
-            <tspan x="143.246" y="388.641" onClick={()=>{setCurrent(1500)}}>
+            <tspan x="143.246" y="388.641">
               I
             </tspan>
           </text>
@@ -164,9 +177,10 @@ function Icon({ hover, setCurrent }) {
             style={{ whiteSpace: "pre" }}
             fontSize="29.672"
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.6135 -.3865 .65696 1.04282 -201.35 -6.917)"
-            className="clockface-ii"
+            className="clockface"
+            onClick={()=>{setCurrent(angleToCurrent(angle))}}
           >
-            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(2500)}}>
+            <tspan x="143.246" y="388.641">
               II
             </tspan>
           </text>
@@ -174,9 +188,10 @@ function Icon({ hover, setCurrent }) {
             style={{ lineHeight: 39.5388, whiteSpace: "pre" }}
             fontSize="25.484"
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.79053 0 0 1.29493 124.157 -193.153)"
-            className="clockface-iii"
+            className="clockface"
+            onClick={()=>{setCurrent(angleToCurrent(angle))}}
           >
-            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(3500)}}>
+            <tspan x="143.246" y="388.641">
               III
             </tspan>
           </text>
@@ -184,9 +199,10 @@ function Icon({ hover, setCurrent }) {
             style={{ lineHeight: 41.4903, whiteSpace: "pre" }}
             fontSize="25.931"
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.70628 .36467 -.62951 1.21922 484.013 -194.318)"
-            className="clockface-iv"
+            className="clockface"
+            onClick={()=>{setCurrent(angleToCurrent(angle))}}
           >
-            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(4500)}}>
+            <tspan x="143.246" y="388.641">
               IV
             </tspan>
           </text>
@@ -194,9 +210,10 @@ function Icon({ hover, setCurrent }) {
             style={{ whiteSpace: "pre" }}
             fontSize="32.736"
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.44074 .77387 -1.13423 .64598 793.117 39.39)"
-            className="clockface-v"
+            className="clockface"
+            onClick={()=>{setCurrent(angleToCurrent(angle))}}
           >
-            <tspan x="143.246" y="388.641"  onClick={()=>{setCurrent(5500)}}>
+            <tspan x="143.246" y="388.641">
               V
             </tspan>
           </text>
@@ -212,7 +229,7 @@ function Icon({ hover, setCurrent }) {
           letterSpacing="0.5"
           transform="rotate(-62.8 -158.177 261.58)"
           className="clockface-i"
-          onClick={() => { setCurrent(1500) }}
+          onClick={()=>{setCurrent(angleToCurrent(angle))}}
         >
           bio
         </text>
@@ -227,7 +244,7 @@ function Icon({ hover, setCurrent }) {
           letterSpacing="0.5"
           transform="rotate(-32.2 -480.86 116.893)"
           className="clockface-ii"
-          onClick={() => { setCurrent(2500) }}
+          onClick={()=>{setCurrent(angleToCurrent(angle))}}
         >
           experience
         </text>
@@ -241,7 +258,7 @@ function Icon({ hover, setCurrent }) {
           fontWeight="500"
           letterSpacing="0.5"
           className="clockface-iii"
-          onClick={() => { setCurrent(3500) }}
+          onClick={()=>{setCurrent(angleToCurrent(angle))}}
         >
           portfolio
         </text>
@@ -256,7 +273,7 @@ function Icon({ hover, setCurrent }) {
           letterSpacing="0.5"
           transform="rotate(27.3 842.916 183.896)"
           className="clockface-iv"
-          onClick={() => { setCurrent(4500) }}
+          onClick={()=>{setCurrent(angleToCurrent(angle))}}
         >
           hobbies
         </text>
@@ -271,12 +288,12 @@ function Icon({ hover, setCurrent }) {
           letterSpacing="0.5"
           transform="rotate(60.305 532.606 289.657)"
           className="clockface-v"
-          onClick={() => { setCurrent(5500) }}
+          onClick={()=>{setCurrent(angleToCurrent(angle))}}
         >
           contact
         </text>
       </svg>
-    </>
+    </div>
   );
 }
 

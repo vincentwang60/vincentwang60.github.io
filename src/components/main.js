@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { useMediaQuery } from 'react-responsive'
 import '../styles/main.css'
 import Gear from '../components/gear'
 import Watch from "./clockface.js"
+import Header from "../components/header"
 import Content from "./content.js"
 import Hand from "../images/hand.svg"
 import gsap from "gsap";
@@ -9,7 +11,6 @@ import gsap from "gsap";
 
 
 const Main = (props) => {
-  const isBrowser = typeof window !== "undefined"
   // -------------------- STATES -------------------- \\
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
   const [mouseCoords, setMouseCoords] = useState({ x: 0, y: 0 });
@@ -40,9 +41,6 @@ const Main = (props) => {
   }
 
   function getWindowDimensions() {
-    if (!isBrowser){
-      return {x:1000,y:1000};
-    }
     const { innerWidth: newWidth, innerHeight: newHeight } = window;
     return { x: newWidth, y: newHeight };
   }
@@ -55,7 +53,7 @@ const Main = (props) => {
     const handleWindowMouseMove = event => {
       setMouseCoords({ x: event.clientX, y: event.clientY, });
     };
-    const handleResize = () => { setWindowDimensions(getWindowDimensions()); }
+    const handleResize = () => { console.log(getWindowDimensions()); setWindowDimensions(getWindowDimensions()); }
     window.addEventListener('mousemove', handleWindowMouseMove);
     window.addEventListener('resize', handleResize);
     demoAsyncCall().then(setLoading(false))
@@ -96,20 +94,19 @@ const Main = (props) => {
   }, [props.current, windowDimensions])
 
   // -------------------- RENDER -------------------- \\
-  if(!loading){
+  if(loading){
     return (
       <div className="main-background">
-        <div className="main-background secondary">
-          <Content current={props.current} setCurrent={props.setCurrent} windowDimensions={windowDimensions} />
-          <div className="main-watchContainer">
-            <div className="main-gearContainer">
-              <Gear angle={angle} />
-            </div>
-            <img className="main-watch-hand" src={Hand} alt="Watch face" />
-            <div className="main-watch">
-              <Watch hover={hover} setCurrent={props.setCurrent} />
-            </div>
-          </div>
+        loading
+      </div>
+    )
+  }
+  if(windowDimensions.x < 800){
+    return (
+      <div className="main-background">
+        <div onWheel={(e) => { handleScroll(-e.nativeEvent.wheelDelta) }} className="main-background secondary">
+        <Header mobile = {true} setCurrent = {props.setCurrent} />
+          <Content mobile = {true} current={props.current} setCurrent={props.setCurrent} windowDimensions={windowDimensions} />
         </div>
       </div>
     )
@@ -117,14 +114,15 @@ const Main = (props) => {
   return (
     <div className="main-background">
       <div onWheel={(e) => { handleScroll(-e.nativeEvent.wheelDelta) }} className="main-background secondary">
-        <Content current={props.current} setCurrent={props.setCurrent} windowDimensions={windowDimensions} />
+      <Header mobile = {false} setCurrent = {props.setCurrent} />
+        <Content mobile = {false} current={props.current} setCurrent={props.setCurrent} windowDimensions={windowDimensions} />
         <div className="main-watchContainer">
           <div className="main-gearContainer">
             <Gear angle={angle} />
           </div>
           <img className="main-watch-hand" src={Hand} alt="Watch face" />
           <div className="main-watch">
-            <Watch hover={hover} setCurrent={props.setCurrent} />
+            <Watch setCurrent={props.setCurrent} hover={hover} angle={angle}/>
           </div>
         </div>
       </div>

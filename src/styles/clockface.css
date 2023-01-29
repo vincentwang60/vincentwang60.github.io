@@ -1,14 +1,13 @@
-.clockface-i{
+.clockface {
     cursor: pointer;
-    
-}.clockface-ii{
+}.clockface-i {
     cursor: pointer;
-    
-}.clockface-iii{
+}.clockface-ii {
     cursor: pointer;
-    
-}.clockface-iv{
+}.clockface-iii {
     cursor: pointer;
-}.clockface-v{
+}.clockface-iv {
+    cursor: pointer;
+}.clockface-v {
     cursor: pointer;
 }

@@ -13,7 +13,7 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-  "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit"
   },
@@ -32,6 +32,7 @@
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.4.0",
+    "react-responsive": "^9.0.2",
     "sharp": "^0.30.7"
   },
   "devDependencies": {

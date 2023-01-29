@@ -2,11 +2,17 @@ import React from "react";
 import Face from "../../images/face.png"
 import '../../styles/home.css'
 
-const Home = () => {
+const Home = ({mobile}) => {
+    if (mobile){
+        return (
+            <div>
+                smol
+            </div>
+        )
+    }
     return (
         <div className="content-container c0">
             <div className="content-imageContainer">
-                <div className="circle"></div>
                 <img src={Face} className="content-image" alt="Face"></img>
             </div>
             <div>
