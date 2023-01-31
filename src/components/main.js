@@ -17,6 +17,7 @@ const Main = (props) => {
   const [angle, setAngle] = useState(0)
   const [hover, setHover] = useState(0)
   const [loading, setLoading] = useState(true)
+  const [swiped, setSwiped] = useState(0)
 
   // -------------------- FUNCTIONS -------------------- \\
   function handleScroll(scrollAmount) {
@@ -53,7 +54,15 @@ const Main = (props) => {
     const handleWindowMouseMove = event => {
       setMouseCoords({ x: event.clientX, y: event.clientY, });
     };
-    const handleResize = () => { console.log(getWindowDimensions()); setWindowDimensions(getWindowDimensions()); }
+    const handleResize = () => {setWindowDimensions(getWindowDimensions()); }
+    let touchX, touchY;
+    window.addEventListener('touchstart', (e) => {
+      [touchX, touchY] = [e.touches[0].clientX, e.touches[0].clientY]
+      setMouseCoords({ x:touchX, y:touchY});
+    }, false);
+    window.addEventListener('touchend', (e) => {
+      setSwiped(e.changedTouches[0].clientX-touchX)
+    }, false);
     window.addEventListener('mousemove', handleWindowMouseMove);
     window.addEventListener('resize', handleResize);
     demoAsyncCall().then(setLoading(false))
@@ -62,6 +71,15 @@ const Main = (props) => {
       window.removeEventListener('mousemove', handleWindowMouseMove);
     }
   }, [])
+
+  useEffect(()=>{
+    if (swiped > windowDimensions.x/5 && props.current > 1000){
+      props.setCurrent(props.current - 1000)
+    }
+    if (swiped < -windowDimensions.x/5 && props.current < 5000){
+      props.setCurrent(props.current + 1000)
+    }
+  },[swiped])
 
   useEffect(() => {
     setAngle(getAngle(mouseCoords, windowDimensions))

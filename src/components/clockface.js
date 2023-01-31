@@ -167,7 +167,7 @@ function Icon({ hover, setCurrent, angle }) {
             paintOrder="stroke"
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.45761 -.88915 1.10567 .56905 -422.295 324.534)"
             className="clockface"
-            onClick={()=>{setCurrent(angleToCurrent(angle))}}
+            onClick={()=>{setCurrent(1500)}}
           >
             <tspan x="143.246" y="388.641">
               I
@@ -178,7 +178,7 @@ function Icon({ hover, setCurrent, angle }) {
             fontSize="29.672"
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.6135 -.3865 .65696 1.04282 -201.35 -6.917)"
             className="clockface"
-            onClick={()=>{setCurrent(angleToCurrent(angle))}}
+            onClick={()=>{setCurrent(2500)}}
           >
             <tspan x="143.246" y="388.641">
               II
@@ -189,7 +189,7 @@ function Icon({ hover, setCurrent, angle }) {
             fontSize="25.484"
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.79053 0 0 1.29493 124.157 -193.153)"
             className="clockface"
-            onClick={()=>{setCurrent(angleToCurrent(angle))}}
+            onClick={()=>{setCurrent(3500)}}
           >
             <tspan x="143.246" y="388.641">
               III
@@ -200,7 +200,7 @@ function Icon({ hover, setCurrent, angle }) {
             fontSize="25.931"
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.70628 .36467 -.62951 1.21922 484.013 -194.318)"
             className="clockface"
-            onClick={()=>{setCurrent(angleToCurrent(angle))}}
+            onClick={()=>{setCurrent(4500)}}
           >
             <tspan x="143.246" y="388.641">
               IV
@@ -211,7 +211,7 @@ function Icon({ hover, setCurrent, angle }) {
             fontSize="32.736"
             transform="matrix(.98016 0 0 .98016 5.557 -252.228) matrix(.44074 .77387 -1.13423 .64598 793.117 39.39)"
             className="clockface"
-            onClick={()=>{setCurrent(angleToCurrent(angle))}}
+            onClick={()=>{setCurrent(5500)}}
           >
             <tspan x="143.246" y="388.641">
               V
@@ -229,7 +229,7 @@ function Icon({ hover, setCurrent, angle }) {
           letterSpacing="0.5"
           transform="rotate(-62.8 -158.177 261.58)"
           className="clockface-i"
-          onClick={()=>{setCurrent(angleToCurrent(angle))}}
+          onClick={()=>{setCurrent(1500)}}
         >
           bio
         </text>
@@ -244,7 +244,7 @@ function Icon({ hover, setCurrent, angle }) {
           letterSpacing="0.5"
           transform="rotate(-32.2 -480.86 116.893)"
           className="clockface-ii"
-          onClick={()=>{setCurrent(angleToCurrent(angle))}}
+          onClick={()=>{setCurrent(2500)}}
         >
           experience
         </text>
@@ -258,7 +258,7 @@ function Icon({ hover, setCurrent, angle }) {
           fontWeight="500"
           letterSpacing="0.5"
           className="clockface-iii"
-          onClick={()=>{setCurrent(angleToCurrent(angle))}}
+          onClick={()=>{setCurrent(3500)}}
         >
           portfolio
         </text>
@@ -273,7 +273,7 @@ function Icon({ hover, setCurrent, angle }) {
           letterSpacing="0.5"
           transform="rotate(27.3 842.916 183.896)"
           className="clockface-iv"
-          onClick={()=>{setCurrent(angleToCurrent(angle))}}
+          onClick={()=>{setCurrent(4500)}}
         >
           hobbies
         </text>
@@ -288,7 +288,7 @@ function Icon({ hover, setCurrent, angle }) {
           letterSpacing="0.5"
           transform="rotate(60.305 532.606 289.657)"
           className="clockface-v"
-          onClick={()=>{setCurrent(angleToCurrent(angle))}}
+          onClick={()=>{setCurrent(5500)}}
         >
           contact
         </text>

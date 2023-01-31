@@ -4,7 +4,7 @@ import { IoMenuOutline } from "react-icons/io5";
 import sig from '../images/sig.png'
 
 const Header = (props) => {
-  const [showMenu, setShowMenu] = useState(true)
+  const [showMenu, setShowMenu] = useState(false)
   if (props.mobile){
     let menu;
     if (showMenu){
