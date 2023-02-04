@@ -1,19 +1,10 @@
 @import url("content.css");
-
+.content-container.c1 {
+    padding: 0.5vw;
+}
 .content-text.heading {
     padding: 1vh;
     font-weight: bold;
-}
-
-.content-titleContainer {
-    background-color: #404238;
-    width: 15vw;
-    height: 68vh;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px 0px 0px 5px;
 }
 
 .content-text.mini {
@@ -30,6 +21,9 @@
     padding-bottom: 3vh;
     font-weight: bold;
     line-height: 13vh;
+}
+.content-text.title.mobile {
+    font-size: 8vh;
 }
 
 .content-textContainer {

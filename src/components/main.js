@@ -12,6 +12,7 @@ import gsap from "gsap";
 
 const Main = (props) => {
   // -------------------- STATES -------------------- \\
+  const isBrowser = typeof window !== "undefined"
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
   const [mouseCoords, setMouseCoords] = useState({ x: 0, y: 0 });
   const [angle, setAngle] = useState(0)
@@ -42,6 +43,9 @@ const Main = (props) => {
   }
 
   function getWindowDimensions() {
+    if (!isBrowser){
+      return {x:1000,y:1000};
+    }
     const { innerWidth: newWidth, innerHeight: newHeight } = window;
     return { x: newWidth, y: newHeight };
   }
@@ -73,10 +77,10 @@ const Main = (props) => {
   }, [])
 
   useEffect(()=>{
-    if (swiped > windowDimensions.x/5 && props.current > 1000){
+    if (swiped > windowDimensions.x/10 && props.current > 0){
       props.setCurrent(props.current - 1000)
     }
-    if (swiped < -windowDimensions.x/5 && props.current < 5000){
+    if (swiped < -windowDimensions.x/10 && props.current < 5000){
       props.setCurrent(props.current + 1000)
     }
   },[swiped])
@@ -96,19 +100,21 @@ const Main = (props) => {
   }, [angle])
 
   useEffect(() => {
-    if (props.current >= 1000) {
-      // shrinking gear
-      gsap.to(".main-gearContainer", { duration: 1, scale: 0.5, transform: "translateY(5vh)", transformOrigin: 'center', ease: "expo.out" });
-      gsap.to(".main-watch", { duration: 1, scale: 0.5, transform: "translateY(5vh)", transformOrigin: 'center', ease: "expo.out" });
-      gsap.to(".main-watch-hand", { duration: 1, scale: 0.5, rotation: angle, transform: "translateY(5vh)", transformOrigin: '50% 76%', ease: "expo.out" });
+    if (windowDimensions.x > 800){
+      if (props.current >= 1000) {
+        // shrinking gear
+        gsap.to(".main-gearContainer", { duration: 1, scale: 0.5, transform: "translateY(2.5vw)", transformOrigin: 'center', ease: "expo.out" });
+        gsap.to(".main-watch", { duration: 1, scale: 0.5, transform: "translateY(2.5vw)", transformOrigin: 'center', ease: "expo.out" });
+        gsap.to(".main-watch-hand", { duration: 1, scale: 0.5, rotation: angle, transform: "translateY(2.5vw)", transformOrigin: '50% 76%', ease: "expo.out" });
+      }
+      else {
+        // expanding gear
+        gsap.to(".main-gearContainer", { duration: 1, scale: 1, y: 0, ease: "expo.out" });
+        gsap.to(".main-watch", { duration: 1, scale: 1, y: 0, ease: "expo.out" });
+        gsap.to(".main-watch-hand", { duration: 1, scale: 1, y: 0, rotation: angle, transformOrigin: '50% 76%', ease: "expo.out" });
+      }
+      setAngle((props.current-3500)*180/6000)
     }
-    else {
-      // expanding gear
-      gsap.to(".main-gearContainer", { duration: 1, scale: 1, y: 0, ease: "expo.out" });
-      gsap.to(".main-watch", { duration: 1, scale: 1, y: 0, ease: "expo.out" });
-      gsap.to(".main-watch-hand", { duration: 1, scale: 1, y: 0, rotation: angle, transformOrigin: '50% 76%', ease: "expo.out" });
-    }
-    setAngle((props.current-3500)*180/6000)
   }, [props.current, windowDimensions])
 
   // -------------------- RENDER -------------------- \\
@@ -119,12 +125,21 @@ const Main = (props) => {
       </div>
     )
   }
-  if(windowDimensions.x < 800){
+  if(windowDimensions.x < 800 && windowDimensions.y > windowDimensions.x){
     return (
       <div className="main-background">
         <div onWheel={(e) => { handleScroll(-e.nativeEvent.wheelDelta) }} className="main-background secondary">
         <Header mobile = {true} setCurrent = {props.setCurrent} />
           <Content mobile = {true} current={props.current} setCurrent={props.setCurrent} windowDimensions={windowDimensions} />
+          <div className="main-watchContainer">
+            <div className="main-gearContainer mobile">
+              <Gear angle={angle} />
+            </div>
+            <img className="main-watch-hand mobile" src={Hand} alt="Watch face" />
+            <div className="main-watch mobile">
+              <Watch setCurrent={props.setCurrent} hover={hover} angle={angle}/>
+            </div>
+          </div>
         </div>
       </div>
     )

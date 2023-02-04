@@ -10,7 +10,7 @@ const GearSvg = forwardRef(function GearSvg(_, ref) {
             height="100%"
             data-name="Layer 1"
             fill="#6B705C"
-            stroke="#6B705C"
+            stroke="#FCD686"
             viewBox="0 0 259 259"
             class="gear"
         >

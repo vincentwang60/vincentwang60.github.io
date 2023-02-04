@@ -15,13 +15,33 @@
     height: 100%;
 }
 
+.content-titleContainer {
+    background-color: #404238;
+    width: 15vw;
+    height: 68vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.content-titleContainer.mobile {
+    width: 98vw;
+    height: 15vh;
+    border-radius: 5px 5px 0px 0px
+}
+
 .content-container {
     width: 100vw;
     display: flex;
     height: 100%;
     padding: 1vw;
 }
-
+.content-container.mobile {
+    padding: 1vw;
+    flex-direction: column;
+}
 .content-text {
     font-family: 'EB Garamond';
     color: var(--gold);
@@ -36,7 +56,4 @@
 .content-text.body2 {
     white-space: pre-line;
     font-size: 1.3vw;
-}
-.content-container.c1 {
-    padding: 0.5vw;
 }

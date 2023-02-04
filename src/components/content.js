@@ -34,11 +34,11 @@ const Content = ({ mobile, current, setCurrent, windowDimensions }) => {
   return (
     <div className="content-wholeContainer">
       <Home mobile={mobile}/>
-      <Bio setCurrent={setCurrent} />
-      <Experience setCurrent={setCurrent} />
-      <Portfolio setCurrent={setCurrent} />
-      <Hobbies setCurrent={setCurrent} />
-      <Contact setCurrent={setCurrent} />
+      <Bio mobile={mobile} setCurrent={setCurrent} />
+      <Experience mobile={mobile} setCurrent={setCurrent} />
+      <Portfolio mobile={mobile} setCurrent={setCurrent} />
+      <Hobbies mobile={mobile} setCurrent={setCurrent} />
+      <Contact mobile={mobile} setCurrent={setCurrent} />
     </div>
   )
 }

@@ -28,6 +28,12 @@
     position: absolute;
     justify-content: center;
 }
+.main-gearContainer.mobile {
+    top: calc(100vh - 31vw);
+    left: calc(50vw - 31vw);
+    height: 62vw;
+    width: 62vw;
+}
 .main-text {
     color: white;
 }
@@ -38,6 +44,12 @@
     width: 90vh;
     position:absolute;
 }
+.main-watch.mobile {
+    top: calc(100vh - 45vw);
+    left: calc(50vw - 45vw);
+    height: 90vw;
+    width: 90vw;
+}
 .main-watch-hand {
     top: calc(100vh - 38vh);
     left: calc(50vw - 50vh);
@@ -45,7 +57,14 @@
     width: 100vh;
     position:absolute;
 }
+.main-watch-hand.mobile {
+    top: calc(100vh - 38vw);
+    left: calc(50vw - 50vw);
+    height: 50vw;
+    width: 100vw;
+}
 .main-watchContainer{
     height: 100%;
     width: 100%;   
+    pointer-events: none
 }

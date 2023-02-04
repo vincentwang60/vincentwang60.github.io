@@ -42,8 +42,8 @@ function Icon({ hover, setCurrent, angle }) {
           </style>
         </defs>
         <g
-          fill="#D8D8D8"
-          stroke="#D2D2C6"
+          fill="#FCD686"
+          stroke="#FCD686"
           transform="matrix(.98016 0 0 .98016 5.557 -252.228)"
         >
           <path d="M35.42 491.632L52.141 492.827"></path>
@@ -135,7 +135,7 @@ function Icon({ hover, setCurrent, angle }) {
           cx="250.596"
           cy="250.596"
           fill="rgba(255, 0, 0, 0)"
-          stroke="#D2D2C6"
+          stroke="#FCD686"
           strokeWidth="6"
           paintOrder="stroke markers"
           rx="247"
@@ -147,7 +147,7 @@ function Icon({ hover, setCurrent, angle }) {
           cx="250.596"
           cy="250.596"
           fill="rgba(216, 216, 216, 0)"
-          stroke="#D2D2C6"
+          stroke="#FCD686"
           strokeWidth="3"
           rx="187.211"
           ry="187.211"
