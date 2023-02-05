@@ -10,35 +10,38 @@ const Experience = ({ mobile, setCurrent }) => {
         return (
         <div className="content-container mobile">
             <div className="content-titleContainer mobile">
-                <div style={{fontSize: "5.5vh", lineHeight: "5.5vh"}} className="content-text title">{"EXPERIENCE"}</div>
-                <div className="content-text mini">updated {Constants.updated}</div>
+                <div style={{fontSize: "12vw"}} className="content-text title mobile">{"EXPERIENCE"}</div>
+                <div style={{fontSize: "13px"}} className="content-text mini">updated {Constants.updated}</div>
             </div>
-            <div className="content-textContainer">
-                <div className="content-text subject">
+            <div className="content-textContainer mobile">
+                <div className="content-text heading mobile">
                     {"Work\n"}
+                    <IoClose onClick={()=>{setCurrent(0);}} size={'2.5vh'} className="content-close mobile" />
                 </div>
-                <div className="content-line"></div>
-                <div className="content-text body3">
-                    {"As a Full-Stack Web Developer Intern at MassMutual, this summer I helped develop a secure and seamless authentication portal. I managed our databases, developed new front-end pages, and faced incoming security threats.\n\n"}
-                    {"As a research assistant at MIT I've conducted research at the MIT Media Lab and Space Systems Laboratory. I collected and analyzed data, created models, developed prototypes, and designed education games.\n\n"}
-                    {"I've learned to work effectively both independently and with a team while communicating effectively."}
+                <div className="content-line mobile"></div>
+                <div className="experience-top-container">
+                    <div className="content-text body3 mobile">
+                        {"As a Full-Stack Web Developer Intern at MassMutual, this summer I helped develop a secure and seamless authentication portal. I managed our databases, developed new front-end pages, and faced incoming security threats.\n\n"}
+                        {"As a research assistant at MIT I've conducted research at the MIT Media Lab and Space Systems Laboratory. I collected and analyzed data, created models, developed prototypes, and designed education games.\n\n"}
+                        {"I've learned to work effectively both independently and with a team while communicating effectively."}
+                    </div>
+                    <div className="experience-image-container mobile">
+                        <img className="content-image-pic2 mobile" src={pic2} alt="mitcsc"></img>
+                        <img className="content-image-pic2 mobile" src={pic4} alt="solo"></img>
+                    </div>
                 </div>
-                <div className="content-text subject">
+                
+                <div className="content-text heading mobile">
                     {"Activities\n"}
                 </div>
                 <div className="content-line"></div>
-                <div className="content-text body3">
+                <div className="content-text body3 mobile">
                     {"As president of the MIT Chinese Students Club, I promote Asian American advocacy, celebrate Chinese culture, and organize events for both MIT and the greater Boston area.\n\n"}
                     {"I'm also on the MIT Varsity Squash team, having played for over 12 years.\n\n"}
                     {"I've learned how to deal with pressure and how to be bold and take initiative."}
 
                 </div>
             </div>
-            <div className="content-image-container">
-                <img className="content-image-pic2" src={pic2} alt="mitcsc"></img>
-                <img className="content-image-pic2" src={pic4} alt="solo"></img>
-            </div>
-            <IoClose onClick={()=>{setCurrent(0);}} size={'2vw'} className="content-close" />
         </div>
         )
     }
@@ -70,7 +73,7 @@ const Experience = ({ mobile, setCurrent }) => {
 
                 </div>
             </div>
-            <div className="content-image-container">
+            <div className="experience-image-container">
                 <img className="content-image-pic2" src={pic2} alt="mitcsc"></img>
                 <img className="content-image-pic2" src={pic4} alt="solo"></img>
             </div>

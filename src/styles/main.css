@@ -66,5 +66,5 @@
 .main-watchContainer{
     height: 100%;
     width: 100%;   
-    pointer-events: none
+    user-select: none;
 }

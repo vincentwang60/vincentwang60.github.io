@@ -3,21 +3,30 @@
     padding: 1vh;
     font-weight: bold;
 }
-.content-image-container {
+.experience-top-container {
+    display: flex;
+    flex-direction: row;
+}
+.experience-image-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding-left: 1vw;
     height: 80%;
 }
+.experience-image-container.mobile {
+    padding: 0;
+    width: 150%;
+    height: auto;
+}
 .content-image-pic2 {
     width: 24vw;
     height: 16vw;
     border-radius: 5px;
 }
-.content-text.subject {
-    font-size: 1.6vw;
-    font-weight: bold;
+.content-image-pic2.mobile {
+    width: 100%;
+    height: auto;
 }
 .content-close {
     margin-right: 0.5vw;
@@ -25,4 +34,7 @@
 .content-text.body3 {
     white-space: pre-line;
     font-size: 1.22vw;
+}
+.content-text.body3.mobile {
+    font-size: 1.22vh;
 }

@@ -2,10 +2,6 @@
 .content-container.c1 {
     padding: 0.5vw;
 }
-.content-text.heading {
-    padding: 1vh;
-    font-weight: bold;
-}
 
 .content-text.mini {
     font-size: 17px;
@@ -13,50 +9,32 @@
     text-align: center;
 }
 
-.content-text.title {
-    white-space: pre-line;
-    font-size: 6vw;
-    text-shadow: 0px 8px 8px rgba(107, 112, 92, 0.8);
-    text-align: center;
-    padding-bottom: 3vh;
-    font-weight: bold;
-    line-height: 13vh;
-}
-.content-text.title.mobile {
-    font-size: 8vh;
+.bio-topContainer {
+    display: flex;
 }
 
-.content-textContainer {
-    padding-left: 3vh;
-    width: 53vw;
-}
-
-.content-line {
-    margin-top: 1vh;
-    width: 50vw;
-    height: 0px;
-    margin-bottom: 1vh;
-
-    border: 1px solid #767967;
-}
-
-.content-image-pic1-container {
+.bio-pic-container {
     padding-left: 3vw;
     display: flex;
     height: 68vh;
     align-items: center;
 }
 
-.content-image-pic1 {
-    width: 20vw;
-    height: 26.6vw;
+.bio-pic-container.mobile {
+    height: 100%;
+    width: 70%;
+}
+
+.bio-pic {
     border-radius: 5px;
+    height: 30vw;
 }
 
 .content-skillsContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 8px;
 }
 
 .content-text.skills {
@@ -70,14 +48,17 @@
     height: 9vh;
     line-height: 1vh;
 }
-
-.content-close {
-    margin-left: 3vw;
-    color: #D2D2C6;
-    cursor: pointer;
+.content-text.skills.mobile {
+    width: 15vh;
+    height: 15vw;
+    padding: 1vw;
+}
+.content-text.mobile {
+    font-size: 1.5vh;
 }
 
-.content-icon {
+.bio-icon {
     color: #D2D2C6;
     margin-top: 2vh;
+    size: 2vw;
 }

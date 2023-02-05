@@ -53,7 +53,62 @@
     white-space: pre-line;
     font-size: 1.5vw;
 }
+.content-text.body.mobile {
+    white-space: pre-line;
+    font-size: 1.5vh;
+}
 .content-text.body2 {
     white-space: pre-line;
     font-size: 1.3vw;
+}
+.content-text.heading {
+    padding: 1vh;
+    font-weight: bold;
+}
+.content-text.heading.mobile {
+    font-size: 5vw;
+    justify-content: space-between;
+    display: flex;
+    padding: 1vw;
+}
+
+.content-line {
+    margin-top: 1vh;
+    width: 50vw;
+    height: 0px;
+    margin-bottom: 1vh;
+    border: 1px solid var(--light-gold);
+}
+.content-line.mobile {
+    margin-top: 0.5vh;
+}
+
+.content-textContainer {
+    padding: 7px;
+    width: 53vw;
+}
+.content-textContainer.mobile {
+    width: 100%;
+}
+
+.content-close {
+    margin-left: 3vw;
+    color: #D2D2C6;
+    cursor: pointer;
+}
+.content-close.mobile {
+    align-self: center;
+}
+
+.content-text.title {
+    white-space: pre-line;
+    font-size: 6vw;
+    text-shadow: 0px 8px 8px rgba(107, 112, 92, 0.8);
+    text-align: center;
+    font-weight: bold;
+    padding: 0;
+}
+.content-text.title.mobile {
+    font-size: 8vh;
+    text-shadow: 0px 3px 3px rgba(107, 112, 92, 0.8);
 }
