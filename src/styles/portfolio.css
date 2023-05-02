@@ -1,7 +1,11 @@
 @import url("content.css");
-.content-main {
+.portfolio-main {
     display: flex;
     width: 80vw;
+}
+.portfolio-main.mobile {
+    flex-direction: column;
+    width: 100%;
 }
 .content-textContainer.portfolio {
     width: 60vw;
@@ -46,4 +50,9 @@
 .content-video2 {
     margin: 0;
     padding: 0;
+}
+.content-text.body2.mobile {
+    font-size: 1.3vh;
+    flex-direction: row;
+    display: flex;
 }

@@ -63,7 +63,14 @@
 }
 .content-text.heading {
     padding: 1vh;
-    font-weight: bold;
+    font-weight: bold;  
+    color: var(--cream);
+}
+.content-text.subject {
+    padding: 1vh;
+    font-weight: bold;  
+    color: var(--cream);
+    font-size: 2vw;
 }
 .content-text.heading.mobile {
     font-size: 5vw;
