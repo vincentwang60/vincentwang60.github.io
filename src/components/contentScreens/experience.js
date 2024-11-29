@@ -57,8 +57,8 @@ const Experience = ({ mobile, setCurrent }) => {
                 </div>
                 <div className="content-line"></div>
                 <div className="content-text body3">
-                    {"As a Full-Stack Web Developer Intern at MassMutual, this summer I helped develop a secure and seamless authentication portal. I managed our databases, developed new front-end pages, and faced incoming security threats.\n\n"}
-                    {"As a research assistant at MIT I've conducted research at the MIT Media Lab and Space Systems Laboratory. I collected and analyzed data, created models, developed prototypes, and designed education games.\n\n"}
+                    {"As a backend Software Engineer Intern at Arcesium, I designed tools for secure financial data migration and built Kubernetes jobs to handle large-scale state replication. My work improved reporting speed and accuracy to tackle complex accounting challenges.\n\n"}
+                    {"As a Full-Stack Web Developer Intern at MassMutual, I developed a secure and seamless authentication portal. I managed databases, developed new front-end pages, and faced incoming security threats.\n\n"}
                     {"I've learned to work effectively both independently and with a team while communicating effectively."}
                 </div>
                 <div className="content-text subject">
@@ -68,7 +68,6 @@ const Experience = ({ mobile, setCurrent }) => {
                 <div className="content-text body3">
                     {"As president of the MIT Chinese Students Club, I promote Asian American advocacy, celebrate Chinese culture, and organize events for both MIT and the greater Boston area.\n\n"}
                     {"I'm also on the MIT Varsity Squash team, having played for over 12 years.\n\n"}
-                    {"I've learned how to deal with pressure and how to be bold and take initiative."}
 
                 </div>
             </div>
