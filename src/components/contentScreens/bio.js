@@ -21,7 +21,7 @@ const Bio = ({ mobile, setCurrent }) => {
                     <div className="bio-topContainer">
                         <div className="content-text body mobile">
                             {"Hi, my name is Vincent Wang!\n"}
-                            {"I'm a student at MIT majoring in Math and Computer Science and I love learning, trying new things, and building fun projects.\n\n"}
+                            {"I'm a senior at MIT majoring in Math and Computer Science and I love learning, trying new things, and building fun projects.\n\n"}
                             {"I have experience writing production-level code and am skilled in:\n"}
                         </div>                        
                         <div className="bio-pic-container mobile">
@@ -41,7 +41,7 @@ const Bio = ({ mobile, setCurrent }) => {
                         <div className="content-text skills mobile">VCS <IoLogoGithub size={'3vh'} className="bio-icon"/></div>
                     </div>
                     <div className="content-text body mobile">
-                        {"I'm expecting to graduate in December 2023.\n\n"}
+                        {"I'm expecting to graduate in May 2024.\n\n"}
                         {"I’m passionate about web and app development, education, algorithms, and mathematics."}
                     </div>
                 </div>

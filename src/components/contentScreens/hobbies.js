@@ -23,7 +23,7 @@ const Hobbies = ({ mobile, setCurrent }) => {
                     </div>
                     <div className="content-line mobile"></div>
                     <div className="content-text body2 mobile">
-                        {"Cooking for myself over the pandemic sparked a strong passion for cooking, and I love experimenting with new recipes and ingredients in the kitchen."}
+                        {"Cooking for myself over the pandemic sparked a strong passion for cooking, and I love experimenting with new recipes and ingredients in the kitchen. "}
                         {"Some of my favorites include handmade pasta, black bean udon noodles, and shepherds pie."}
                     </div>
                     <div className="content-text heading mobile">
