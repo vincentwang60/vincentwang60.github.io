@@ -2,8 +2,9 @@ import React from "react";
 import pic1 from "../../images/pic1.jpg"
 import '../../styles/bio.css'
 import Constants from '../../constants'
-import { IoLogoPython, IoLogoJavascript, IoLogoReact, IoLogoHtml5, IoLogoFirebase, IoLogoGithub, IoClose } from "react-icons/io5";
-import { SiMongodb, SiCplusplus } from "react-icons/si";
+import { IoLogoPython, IoLogoJavascript, IoLogoReact, IoLogoHtml5, IoLogoGithub, IoClose } from "react-icons/io5";
+import { SiKubernetes } from 'react-icons/si';
+import { FaAws, FaLinux } from "react-icons/fa";
 
 const Bio = ({ mobile, setCurrent }) => {
     if (mobile){
@@ -20,8 +21,8 @@ const Bio = ({ mobile, setCurrent }) => {
                     <div className="content-line mobile"></div>
                     <div className="bio-topContainer">
                         <div className="content-text body mobile">
-                            {"Hi, my name is Vincent Wang!\n"}
-                            {"I'm a senior at MIT majoring in Math and Computer Science and I love learning, trying new things, and building fun projects.\n\n"}
+                            {"I'm a senior at MIT majoring in Math and Computer Science.\n"}
+                            {"I love learning, trying new things, and building fun projects.\n\n"}
                             {"I have experience writing production-level code and am skilled in:\n"}
                         </div>                        
                         <div className="bio-pic-container mobile">
@@ -35,14 +36,14 @@ const Bio = ({ mobile, setCurrent }) => {
                         <div className="content-text skills mobile">HTML <IoLogoHtml5 size={'3vh'} className="bio-icon"/></div>
                     </div>
                     <div className="content-skillsContainer">
-                        <div className="content-text skills mobile">Firebase <IoLogoFirebase size={'3vh'} className="bio-icon"/></div>
-                        <div className="content-text skills mobile">MongoDB <SiMongodb size={'3vh'} className="bio-icon"/></div>
-                        <div className="content-text skills mobile">C++ <SiCplusplus size={'3vh'} className="bio-icon"/></div>
+                        <div className="content-text skills mobile">Kubernetes <SiKubernetes  size={'3vh'} className="bio-icon"/></div>
+                        <div className="content-text skills mobile">AWS <FaAws size={'3vh'} className="bio-icon"/></div>
+                        <div className="content-text skills mobile">Linux <FaLinux  size={'3vh'} className="bio-icon"/></div>
                         <div className="content-text skills mobile">VCS <IoLogoGithub size={'3vh'} className="bio-icon"/></div>
                     </div>
                     <div className="content-text body mobile">
-                        {"I'm expecting to graduate in May 2024.\n\n"}
-                        {"I’m passionate about web and app development, education, algorithms, and mathematics."}
+                        {"I'm expecting to graduate in December 2025.\n\n"}
+                        {"I’m passionate about mathematics, algorithms, and full-stack software development."}
                     </div>
                 </div>
             </div>
@@ -59,8 +60,8 @@ const Bio = ({ mobile, setCurrent }) => {
                 <div className="content-text heading">Background</div>
                 <div className="content-line"></div>
                 <div className="content-text body">
-                    {"Hi, my name is Vincent Wang!\n"}
-                    {"I'm a student at MIT majoring in Math and Computer Science and I love learning, trying new things, and building fun projects.\n\n"}
+                    {"I'm a senior at MIT majoring in Math and Computer Science.\n"}
+                    {"I love learning, trying new things, and building fun projects.\n\n"}
                     {"I have experience writing production-level code and am skilled in:\n"}
                 </div>
                 <div className="content-skillsContainer">
@@ -70,14 +71,14 @@ const Bio = ({ mobile, setCurrent }) => {
                     <div className="content-text skills">HTML <IoLogoHtml5 className="bio-icon" size={'2vw'}/></div>
                 </div>
                 <div className="content-skillsContainer">
-                    <div className="content-text skills">Firebase <IoLogoFirebase className="bio-icon" size={'2vw'}/></div>
-                    <div className="content-text skills">MongoDB <SiMongodb className="bio-icon" size={'2vw'}/></div>
-                    <div className="content-text skills">C++ <SiCplusplus className="bio-icon" size={'2vw'}/></div>
+                    <div className="content-text skills">Kubernetes <SiKubernetes className="bio-icon" size={'2vw'}/></div>
+                    <div className="content-text skills">AWS <FaAws className="bio-icon" size={'2vw'}/></div>
+                    <div className="content-text skills">Linux <FaLinux className="bio-icon" size={'2vw'}/></div>
                     <div className="content-text skills">VCS <IoLogoGithub className="bio-icon" size={'2vw'}/></div>
                 </div>
                 <div className="content-text body">
-                    {"I'm expecting to graduate in December 2023.\n\n"}
-                    {"I’m passionate about web and app development, education, algorithms, and mathematics."}
+                    {"I'm expecting to graduate in December 2025.\n\n"}
+                    {"I’m passionate about mathematics, algorithms, and full-stack software development."}
                 </div>
             </div>
             <div className="bio-pic-container">

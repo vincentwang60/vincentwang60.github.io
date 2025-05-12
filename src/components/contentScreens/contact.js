@@ -23,7 +23,7 @@ const Contact = ({ setCurrent }) => {
                 <div className="content-text heading">Contact Information</div>
                 <div className="content-line"></div>
                 <div className="content-text body">
-                    {"I'm currently looking for interesting and challenging software interships and other opportunities!\n"}
+                    {"I'm currently looking for interesting and challenging software experiences and other opportunities!\n"}
                     {"You can reach me via email at"}<a onClick={() => {navigator.clipboard.writeText('vkwang@mit.edu'); setFade(1)}} className="content-text link"><IoMail className="content-social" size={'1.5vw'}/>vkwang@mit.edu</a>
                     <a style={{opacity: fade}}><IoCopy className="content-social" size={'1.5vw'}/>copied to clipboard</a>
                     {"\nCheck out some more of my work at my github:"}

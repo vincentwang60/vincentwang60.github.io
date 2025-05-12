@@ -84,7 +84,7 @@ const Portfolio = ({ mobile, setCurrent }) => {
                             <source src={video} type="video/mp4" />
                         </video>
                         <div className="content-text caption">
-                            {"Click App demo, developed in 2021"}
+                            {"Click App demo"}
                             <div>
                                 <a target="_blank" className="content-text caption" href="https://github.com/vincentwang60/Click">Github</a>
                             </div>
@@ -95,7 +95,7 @@ const Portfolio = ({ mobile, setCurrent }) => {
                             <source src={video3} type="video/mp4" />
                         </video>
                         <div className="content-text caption">
-                            {"Sliding puzzle solver, developed in 2020"}
+                            {"Sliding puzzle solver"}
                             <div>
                                 <a target="_blank" className="content-text caption" href="https://github.com/vincentwang60/A-star-sliding-puzzle-solver">Github</a>
                             </div>
@@ -105,7 +105,7 @@ const Portfolio = ({ mobile, setCurrent }) => {
                         <video className='content-video2' width="80%" height="80%" controls muted autoPlay loop>
                             <source src={video2} type="video/mp4" />
                         </video>
-                        <div className="content-text caption">{"PolyPhony demo, developed in 2022 in under 2 weeks"}
+                        <div className="content-text caption">{"PolyPhony demo"}
                             <div>
                             <a target="_blank" className="content-text caption" href="https://github.com/vincentwang60/polyphony">Github</a>
                             <a target="_blank" className="content-text caption" href="https://poly-phony.herokuapp.com/">Link to Website</a>

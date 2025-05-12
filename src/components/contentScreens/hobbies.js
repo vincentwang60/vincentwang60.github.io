@@ -40,7 +40,7 @@ const Hobbies = ({ mobile, setCurrent }) => {
                     </div>
                     <div className="content-line mobile"></div>
                     <div className="content-text body2 mobile">
-                        {"Over the last couple of years I have developed a passion for indoor bouldering. I love the euphoric feeling of finally completing a "}
+                        {"Over the last couple of years I have developed a passion for indoor bouldering. I love the feeling of finally completing a "}
                         {"bouldering 'problem' after improving in incremental amounts for weeks. I find that bouldering is an awesome way to stay in shape and challenge myself."}
                     </div>
                 </div>
@@ -73,7 +73,7 @@ const Hobbies = ({ mobile, setCurrent }) => {
                 </div>
                 <div className="content-line"></div>
                 <div className="content-text body2">
-                    {"Cooking for myself over the pandemic sparked a strong passion for cooking, and I love experimenting with new recipes and ingredients in the kitchen."}
+                    {"Cooking for myself over the pandemic sparked a strong passion for cooking, and I love experimenting with new recipes and ingredients in the kitchen. "}
                     {"Some of my favorites include handmade pasta, black bean udon noodles, and shepherds pie."}
                 </div>
                 <div className="content-text subject">
@@ -90,7 +90,7 @@ const Hobbies = ({ mobile, setCurrent }) => {
                 </div>
                 <div className="content-line"></div>
                 <div className="content-text body2">
-                    {"Over the last couple of years I have developed a passion for indoor bouldering. I love the euphoric feeling of finally completing a "}
+                    {"Over the last couple of years I have developed a passion for indoor bouldering. I love the feeling of finally completing a "}
                     {"bouldering 'problem' after improving in incremental amounts for weeks. I find that bouldering is an awesome way to stay in shape and challenge myself."}
                 </div>
             </div>
