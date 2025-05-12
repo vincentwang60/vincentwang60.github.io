@@ -24,7 +24,8 @@ const Contact = ({ setCurrent }) => {
                 <div className="content-line"></div>
                 <div className="content-text body">
                     {"I'm currently looking for interesting and challenging software experiences and other opportunities!\n"}
-                    {"You can reach me via email at"}<a onClick={() => {navigator.clipboard.writeText('vkwang@mit.edu'); setFade(1)}} className="content-text link"><IoMail className="content-social" size={'1.5vw'}/>vkwang@mit.edu</a>
+                    {"Download my resume here: "}<a className="content-text link" href="/vincent_wang_resume2025.pdf" download>Download Resume</a>
+                    {"\nYou can reach me via email at"}<a onClick={() => {navigator.clipboard.writeText('vkwang@mit.edu'); setFade(1)}} className="content-text link"><IoMail className="content-social" size={'1.5vw'}/>vkwang@mit.edu</a>
                     <a style={{opacity: fade}}><IoCopy className="content-social" size={'1.5vw'}/>copied to clipboard</a>
                     {"\nCheck out some more of my work at my github:"}
                     <a target="_blank" href="https://www.github.com/vincentwang60" className="content-text socials"><IoLogoGithub className="content-social" size={'1.5vw'}/>github.com/vincentwang60</a>
