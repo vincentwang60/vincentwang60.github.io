@@ -1,4 +1,4 @@
 const Constants = {
-    updated: "12 May, 2025"
+    updated: "26 Sep, 2025"
 }
 export default Constants

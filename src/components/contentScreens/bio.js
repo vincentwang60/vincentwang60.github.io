@@ -5,86 +5,100 @@ import Constants from '../../constants'
 import { IoLogoPython, IoLogoJavascript, IoLogoReact, IoLogoHtml5, IoLogoGithub, IoClose } from "react-icons/io5";
 import { SiKubernetes } from 'react-icons/si';
 import { FaAws, FaLinux } from "react-icons/fa";
+import { ResponsiveTitle, ResponsiveHeading, ResponsiveBody, getResponsiveClass, getResponsiveSize, getContainerClass } from '../../utils/textUtils'
 
 const Bio = ({ mobile, setCurrent }) => {
-    if (mobile){
-        return (
-            <div className="content-container mobile">
-                <div className="content-titleContainer mobile">
-                    <div className="content-text title mobile">{"BIO"}</div>
-                    <div style={{fontSize: "13px"}} className="content-text mini">updated {Constants.updated}</div>
+    const containerClass = getContainerClass("content-container", mobile);
+    const titleContainerClass = getContainerClass("content-titleContainer", mobile);
+    const textContainerClass = getContainerClass("content-textContainer", mobile);
+    const closeSize = getResponsiveSize('2.5vh', '2vw', mobile);
+    const closeClass = getResponsiveClass("content-close", mobile);
+    const iconSize = getResponsiveSize('3vh', '2vw', mobile);
+    const miniStyle = mobile ? {fontSize: "13px"} : {};
+
+    const skills = [
+        { name: "Python", icon: IoLogoPython },
+        { name: "JavaScript", icon: IoLogoJavascript },
+        { name: "React (Native)", icon: IoLogoReact },
+        { name: "HTML", icon: IoLogoHtml5 },
+        { name: "Kubernetes", icon: SiKubernetes },
+        { name: "AWS", icon: FaAws },
+        { name: "Linux", icon: FaLinux },
+        { name: "VCS", icon: IoLogoGithub }
+    ];
+
+    const renderSkills = () => (
+        <>
+            <div className="content-skillsContainer">
+                {skills.slice(0, 4).map((skill, index) => {
+                    const IconComponent = skill.icon;
+                    return (
+                        <div key={index} className={getResponsiveClass("content-text skills", mobile)}>
+                            {skill.name} <IconComponent size={iconSize} className="bio-icon"/>
+                        </div>
+                    );
+                })}
+            </div>
+            <div className="content-skillsContainer">
+                {skills.slice(4).map((skill, index) => {
+                    const IconComponent = skill.icon;
+                    return (
+                        <div key={index} className={getResponsiveClass("content-text skills", mobile)}>
+                            {skill.name} <IconComponent size={iconSize} className="bio-icon"/>
+                        </div>
+                    );
+                })}
+            </div>
+        </>
+    );
+
+    return (
+        <div className={containerClass}>
+            <div className={titleContainerClass}>
+                <ResponsiveTitle text="BIO" mobile={mobile} />
+                <div className={getResponsiveClass("content-text mini", mobile)} style={miniStyle}>
+                    updated {Constants.updated}
                 </div>
-                <div className="content-textContainer mobile">
-                    <div className="content-text heading mobile">
-                        Background 
-                        <IoClose onClick={()=>{setCurrent(0);}} size={'2.5vh'} className="content-close mobile" /></div>
-                    <div className="content-line mobile"></div>
+            </div>
+            <div className={textContainerClass}>
+                <div className={getResponsiveClass("content-text heading", mobile)}>
+                    Background 
+                    <IoClose onClick={()=>{setCurrent(0);}} size={closeSize} className={closeClass} />
+                </div>
+                <div className={getResponsiveClass("content-line", mobile)}></div>
+                
+                {mobile ? (
                     <div className="bio-topContainer">
-                        <div className="content-text body mobile">
-                            {"I'm a senior at MIT majoring in Math and Computer Science.\n"}
-                            {"I love learning, trying new things, and building fun projects.\n\n"}
-                            {"I have experience writing production-level code and am skilled in:\n"}
-                        </div>                        
+                        <ResponsiveBody 
+                            text={"I'm a senior at MIT majoring in Math and Computer Science.\nI love learning, trying new things, and building fun projects.\n\nI have experience writing production-level code and am skilled in:\n"} 
+                            mobile={mobile} 
+                        />                        
                         <div className="bio-pic-container mobile">
                             <img className="bio-pic" src={pic1} alt="garden"></img>
                         </div>
                     </div>
-                    <div className="content-skillsContainer">
-                        <div className="content-text skills mobile">Python <IoLogoPython size={'3vh'} className="bio-icon"/></div>
-                        <div className="content-text skills mobile">JavaScript <IoLogoJavascript size={'3vh'} className="bio-icon"/></div>
-                        <div className="content-text skills mobile">React (Native) <IoLogoReact size={'3vh'} className="bio-icon"/></div>
-                        <div className="content-text skills mobile">HTML <IoLogoHtml5 size={'3vh'} className="bio-icon"/></div>
-                    </div>
-                    <div className="content-skillsContainer">
-                        <div className="content-text skills mobile">Kubernetes <SiKubernetes  size={'3vh'} className="bio-icon"/></div>
-                        <div className="content-text skills mobile">AWS <FaAws size={'3vh'} className="bio-icon"/></div>
-                        <div className="content-text skills mobile">Linux <FaLinux  size={'3vh'} className="bio-icon"/></div>
-                        <div className="content-text skills mobile">VCS <IoLogoGithub size={'3vh'} className="bio-icon"/></div>
-                    </div>
-                    <div className="content-text body mobile">
-                        {"I'm expecting to graduate in December 2025.\n\n"}
-                        {"I’m passionate about mathematics, algorithms, and full-stack software development."}
-                    </div>
-                </div>
+                ) : (
+                    <ResponsiveBody 
+                        text={"I'm a senior at MIT majoring in Math and Computer Science.\nI love learning, trying new things, and building fun projects.\n\nI have experience writing production-level code and am skilled in:\n"} 
+                        mobile={mobile} 
+                    />
+                )}
+                
+                {renderSkills()}
+                
+                <ResponsiveBody 
+                    text={"I'm expecting to graduate in December 2025.\n\nI'm passionate about mathematics, algorithms, and full-stack software development."} 
+                    mobile={mobile} 
+                />
             </div>
-        )
-    }
-    return (
-
-        <div className="content-container">
-            <div className="content-titleContainer">
-                <div className="content-text title">{"B\nI\nO"}</div>
-                <div className="content-text mini">updated {Constants.updated}</div>
-            </div>
-            <div className="content-textContainer">
-                <div className="content-text heading">Background</div>
-                <div className="content-line"></div>
-                <div className="content-text body">
-                    {"I'm a senior at MIT majoring in Math and Computer Science.\n"}
-                    {"I love learning, trying new things, and building fun projects.\n\n"}
-                    {"I have experience writing production-level code and am skilled in:\n"}
+            
+            {!mobile && (
+                <div className="bio-pic-container">
+                    <img className="bio-pic" src={pic1} alt="garden"></img>
                 </div>
-                <div className="content-skillsContainer">
-                    <div className="content-text skills">Python <IoLogoPython className="bio-icon" size={'2vw'}/></div>
-                    <div className="content-text skills">JavaScript <IoLogoJavascript className="bio-icon" size={'2vw'}/></div>
-                    <div className="content-text skills">React (Native) <IoLogoReact className="bio-icon" size={'2vw'}/></div>
-                    <div className="content-text skills">HTML <IoLogoHtml5 className="bio-icon" size={'2vw'}/></div>
-                </div>
-                <div className="content-skillsContainer">
-                    <div className="content-text skills">Kubernetes <SiKubernetes className="bio-icon" size={'2vw'}/></div>
-                    <div className="content-text skills">AWS <FaAws className="bio-icon" size={'2vw'}/></div>
-                    <div className="content-text skills">Linux <FaLinux className="bio-icon" size={'2vw'}/></div>
-                    <div className="content-text skills">VCS <IoLogoGithub className="bio-icon" size={'2vw'}/></div>
-                </div>
-                <div className="content-text body">
-                    {"I'm expecting to graduate in December 2025.\n\n"}
-                    {"I’m passionate about mathematics, algorithms, and full-stack software development."}
-                </div>
-            </div>
-            <div className="bio-pic-container">
-                <img className="bio-pic" src={pic1} alt="garden"></img>
-            </div>
-            <IoClose onClick={()=>{setCurrent(0);}} size={'2vw'} className="content-close" />
+            )}
+            
+            {!mobile && <IoClose onClick={()=>{setCurrent(0);}} size={closeSize} className={closeClass} />}
         </div>
     )
 }
